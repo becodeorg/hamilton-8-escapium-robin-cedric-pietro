@@ -1,14 +1,20 @@
+
 body{
     background-color: black;
 }
 .pageiid{
     width: 100%;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-image: url(/assets/resources/images/gallery/slide-1.jpg);
-    background-size: cover;
+    background-size: 100% 100%; /* Ajustez les valeurs de largeur et hauteur selon vos besoins */
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    
     .titre{
         color: azure;
         padding: 10px;
@@ -21,6 +27,30 @@ body{
 .promotions{
     margin-left: 5%;
     margin-right: 5%;
+    
+
+    .promotions_subtitle{
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) repeat(3, 0fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+            
+            
+            .promotions_date { grid-area: 1 / 1 / 2 / 2; 
+                               display: flex;
+                            gap: 5px;}
+            .promotions_member { grid-area: 1 / 2 / 2 / 3;
+                                 display: flex; 
+                                gap: 5px;}
+            .promotions_comments { grid-area: 2 / 1 / 3 / 2; 
+                                   display: flex;
+                                gap:5px;}
+
+
+
+    }
 
 }
 
