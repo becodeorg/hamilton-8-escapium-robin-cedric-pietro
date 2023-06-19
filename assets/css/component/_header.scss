@@ -50,7 +50,23 @@ header {
 				flex-direction: row;
 				align-items: center;
 				justify-content: space-between;
+				position: relative;
 				border-bottom: 2px solid hsla(0, 100%, 100%, 0.1);
+				
+				&::after {
+					position: absolute;
+					content: "";
+					width: 50%;
+					height: 2px;
+					background: $red;
+					transform: rotate(-45deg);
+					opacity: 0;
+					transition: $transition-5;
+				}
+				
+				&:hover::after {
+					opacity: 1;
+				}
 				
 				a {
 					width: 100%;
