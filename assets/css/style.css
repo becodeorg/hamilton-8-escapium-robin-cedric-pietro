@@ -296,11 +296,21 @@ body {
 }
 
 .pageiid {
+  width: 100%;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(/assets/resources/images/gallery/slide-1.jpg);
   background-size: cover;
+}
+.pageiid .titre {
+  color: azure;
+  padding: 10px;
+}
+.pageiid soustitre {
+  display: flex;
+  gap: 10px;
 }
 
 .promotions {

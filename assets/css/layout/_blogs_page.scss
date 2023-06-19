@@ -2,11 +2,21 @@ body{
     background-color: black;
 }
 .pageiid{
+    width: 100%;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(/assets/resources/images/gallery/slide-1.jpg);
     background-size: cover;
+    .titre{
+        color: azure;
+        padding: 10px;
+    }
+    soustitre{
+        display: flex;
+        gap: 10px;
+    }
 }
 .promotions{
     margin-left: 5%;
