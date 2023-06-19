@@ -39,4 +39,14 @@ em, i {
   font-style: normal;
 }
 
+.howToPlay {
+  text-align: center;
+  background-color: #1b1b1b;
+}
+
+h2 {
+  color: white;
+  font-size: 19px;
+}
+
 /*# sourceMappingURL=style.css.map */
