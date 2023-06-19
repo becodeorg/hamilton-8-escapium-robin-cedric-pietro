@@ -1,10 +1,11 @@
 .promotions{
+  
 
     .promotions_img{
-
+       
         img{
             width: 98%;
-            height: 500px;
+            height: auto;
     }
 }
 }
@@ -13,6 +14,10 @@
     border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
 
 }
-.underline {
-    border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
-  }
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#1B1B1B ;
+}
