@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 * {
-  font-size: 14px;
+  /* font-size: 14px; */
   font-family: "Hind", sans-serif;
 }
 
@@ -41,15 +41,18 @@ em, i {
 
 .promotions .promotions_img img {
   width: 98%;
-  height: 500px;
+  height: auto;
 }
 
 .line {
   border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
 }
 
-.underline {
-  border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1B1B1B;
 }
 
 /*# sourceMappingURL=style.css.map */
