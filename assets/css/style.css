@@ -38,13 +38,13 @@ a {
 em, i {
   font-style: normal;
 }
-
 body {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
   transition: all 0.5s ease;
 }
+
 body::before {
   transition: all 0.5s ease;
   content: "";
@@ -276,6 +276,16 @@ header div#burger.on-click span:nth-child(3) {
   header div#burger {
     display: none;
   }
+.promotions .promotions_img img {
+  width: 98%;
+  height: 500px;
 }
 
+.line {
+  border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
+}
+
+.underline {
+  border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
+}
 /*# sourceMappingURL=style.css.map */
