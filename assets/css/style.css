@@ -319,13 +319,22 @@ body {
 .promotions {
   margin-left: 5%;
   margin-right: 5%;
+  color: #a7a8a9;
+}
+.promotions h1 {
+  color: azure;
+  font-size: 28px;
+  margin: 20px;
 }
 .promotions .promotions_subtitle {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) repeat(3, 0fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  position: relative;
+  left: -30px;
+  padding: 20px;
 }
 .promotions .promotions_subtitle .promotions_date {
   grid-area: 1/1/2/2;
@@ -341,6 +350,23 @@ body {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
+}
+.promotions .promotions_description {
+  padding: 20px;
+}
+.promotions .promotions_button {
+  background-color: #222222;
+  color: #a7a8a9;
+  border: 1px solid #a7a8a9;
+  border-radius: 20px;
+  position: relative;
+  left: -120px;
+}
+.promotions .promotions_button p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .line {
