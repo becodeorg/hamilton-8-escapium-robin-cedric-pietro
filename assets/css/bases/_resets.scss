@@ -13,3 +13,35 @@ a {
 em, i {
 	font-style: normal;
 }
+body {
+	width: 100vw;
+	min-height: 100vh;
+	overflow-x: hidden;
+	transition: $transition-5;
+	
+	&::before {
+		transition: $transition-5;
+		content: "";
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		z-index: 700;
+		background: transparent;
+	}
+	
+	&.opacity-7 {
+		overflow: hidden;
+		
+		&::before {
+			background: hsla(0, 0%, 0%, 0.7);
+		}
+	}
+}
+
+@media screen and (min-width: 799px) {
+	
+	body::before {
+		display: none;
+	}
+}

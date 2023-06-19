@@ -10,11 +10,32 @@
 	<body>
 		<header id="header"></header>
 		<main>
+			<section>
+				<h2>Featured Rooms</h2>
+				
+				<section>
+					<article>
+						<span data-lvl="3" id="difficulty"></span>
+						<h3>Magic Imporium</h3>
+						<div>
+							<p>2-3</p>
+							<p>60</p>
+							<p>new york 3031</p>
+						</div>
+						<p>Aenean turpis dolor, ornare sed imperd id, pulvinar eu massa. Nulla accumsan lorem convallis tellus faucibus, eu laoreet. Sed vitae purus.</p>
+						<a href="#">Read More</a>
+					</article>
+					<figure>
+						<img src="assets/resources/images/gallery/slide-2.jpg" alt="house">
+					</figure>
+				</section>
+				
+			</section>
 		</main>
 		<footer id="footer"></footer>
 		<script>
 			$(function() {
-
+				$("difficulty").load("src/_difficulty.html")
 				$("#header").load("src/_header.html")
 				$("#footer").load("src/_footer.html")
 			})
