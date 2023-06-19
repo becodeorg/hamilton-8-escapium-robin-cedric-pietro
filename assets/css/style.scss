@@ -1,11 +1,13 @@
 // import scss element
 // utils
-@import "bases/_fonts.scss", "bases/_resets.scss";
+@import "utils/_variables.scss";
 
 // bases
-@import "utils/_variables.scss";
+@import "bases/_fonts.scss", "bases/_resets.scss";
 
 // layout
 @import"layout/about.scss";
 // component
 @import "component/_header.scss";
+
+@import "layout/_blogs_page.scss";
