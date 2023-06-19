@@ -1,17 +1,23 @@
+body{
+    background-color: black;
+}
+.pageiid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/assets/resources/images/gallery/slide-1.jpg);
+    background-size: cover;
+}
 .promotions{
-  
+    margin-left: 5%;
+    margin-right: 5%;
 
-    .promotions_img{
-       
-        img{
-            width: 98%;
-            height: auto;
-    }
 }
-}
+
+ 
 
 .line{
-    border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
+    border-bottom: 1px solid  #222222; /* Ajoute une ligne de soulignement */
 
 }
 
@@ -20,4 +26,9 @@ article{
     flex-direction: column;
     align-items: center;
     background-color:#1B1B1B ;
+   img{
+        width: 90%;
+        height: auto;
+       
+}
 }
