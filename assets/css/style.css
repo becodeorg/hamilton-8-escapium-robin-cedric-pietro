@@ -424,12 +424,20 @@ footer section:nth-child(2) cite {
     flex-direction: row;
   }
 }
-body {
+main.blogs_pages {
   background-color: black;
 }
-
-.line {
-  border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
+main.blogs_pages h3 {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+main.blogs_pages h3::after {
+  content: "";
+  width: 60%;
+  height: 2px;
+  border-radius: 5px;
+  background: #717171;
 }
 
 .pageiid {
@@ -459,10 +467,10 @@ article {
   align-items: flex-start;
   background-color: #1B1B1B;
   margin: 2rem;
-  color: #a7a8a9;
+  color: #717171;
 }
 article h1 {
-  color: azure;
+  color: #fefefe;
   font-size: 28px;
   margin: 20px;
 }
@@ -472,6 +480,10 @@ article img {
   margin: 2rem;
 }
 
+.promotions .promotions_img {
+  display: flex;
+  justify-content: center;
+}
 .promotions .promotions_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -498,13 +510,16 @@ article img {
 .promotions .promotions_description {
   padding: 20px;
 }
-.promotions .promotions_button {
+.promotions .readmore {
   background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
+  color: #717171;
+  border: 1px solid #717171;
   border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
 }
-.promotions .promotions_button p {
+.promotions .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -537,13 +552,16 @@ article img {
 .teambuilding .teambuilding_description {
   padding: 20px;
 }
-.teambuilding .teambuilding_button {
+.teambuilding .readmore {
   background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
+  color: #717171;
+  border: 1px solid #717171;
   border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
 }
-.teambuilding .teambuilding_button p {
+.teambuilding .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -576,17 +594,79 @@ article img {
 .corporateevents .corporateevents_description {
   padding: 20px;
 }
-.corporateevents .corporateevents_button {
+.corporateevents .readmore {
   background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
+  color: #717171;
+  border: 1px solid #717171;
   border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
 }
-.corporateevents .corporateevents_button p {
+.corporateevents .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.pages {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.pages button {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: #f60b0e;
+  color: #fefefe;
+}
+
+.section {
+  width: 100%;
+  padding: 2rem;
+}
+.section h3 {
+  color: #fefefe;
+}
+.section h3::after {
+  content: "";
+  width: 10%;
+  height: 2px;
+  border-radius: 5px;
+  background: #717171;
+}
+.section li {
+  color: #717171;
+  margin: 20px;
+}
+.section .Instagram_img {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0px;
+}
+.section img {
+  width: 100%;
+}
+.section .recent_posts li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 12px;
+}
+.section .recent_posts li date {
+  display: flex;
+  flex-direction: row;
+}
+.section .recent_posts li date::after {
+  content: "";
+  width: 5%;
+  height: 2px;
+  border-radius: 5px;
+  background: #717171;
 }
 
 /*# sourceMappingURL=style.css.map */
