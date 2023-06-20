@@ -3,11 +3,12 @@ footer {
 	min-height: 50vh;
 	display: flex;
 	flex-direction: column;
-	background-color: hsla(0, 0%, 0%, 0.7);
+	background-color: hsla(0, 0%, 0%, 0.9);
 	background-size: cover;
 	background-image: url("../resources/images/gallery/room-7.jpg");
 	background-position: right;
 	background-repeat: no-repeat;
+	background-blend-mode: multiply;
 	position: relative;
 	
 	span,
