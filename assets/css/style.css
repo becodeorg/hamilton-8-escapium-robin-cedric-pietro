@@ -259,6 +259,7 @@ header div#burger.on-click span:nth-child(3) {
     text-transform: uppercase;
   }
   header section:nth-child(2) div.search-containers {
+    width: 250px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -326,6 +327,7 @@ footer section article {
   align-items: flex-start;
   justify-content: center;
   gap: 1em;
+  background: none;
 }
 footer section article div {
   width: 100%;
