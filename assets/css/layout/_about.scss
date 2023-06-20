@@ -1,12 +1,13 @@
-#about{
+main.about{
     .howToPlay{
         background-color: #1b1b1b;
         text-align: center;
         color: #717171;
         padding: 5%;
         &__title{
+            padding-top: 15%;
             color: #fefefe;
-            padding-top: 10%;
+            margin-top: 10%;
         }
         &__whoShouldPlay{
             margin-top: 20%;
@@ -32,6 +33,10 @@
                 color: #fefefe;
                 padding: 5%;
             }
+        }
+        video{
+            padding: 7% 0 0 7%;
+            
         }
     }
 
@@ -107,7 +112,20 @@
     }
     .blogs{
         background-color: #fefefe;
-        text-align: center;
         font-size: 10px;
+        &__title{
+            color: black;
+            text-align: center;
+        }
+        &__para{
+            color: #717171;
+            text-align: center;
+        }
+        &__faq{
+           &__question{
+            display: flex;
+            justify-content: flex-start;
+           }
+        }
     }
 }

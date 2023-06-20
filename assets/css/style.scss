@@ -6,8 +6,7 @@
 @import "bases/_fonts.scss", "bases/_resets.scss";
 
 // layout
-@import"layout/about.scss";
 // component
 @import "component/_header.scss", "component/_footer.scss";
 
-@import "layout/_acceuil.scss", "layout/_blogs_page.scss";
+@import "layout/_acceuil.scss", "layout/about.scss", "layout/_blogs_page.scss";
