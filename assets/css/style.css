@@ -439,8 +439,7 @@ main.blogs_pages h3::after {
   border-radius: 5px;
   background: #717171;
 }
-
-.pageiid {
+main.blogs_pages .pageiid {
   width: 100%;
   height: 300px;
   display: flex;
@@ -452,16 +451,15 @@ main.blogs_pages h3::after {
   background-repeat: no-repeat;
   background-position: center;
 }
-.pageiid .titre {
+main.blogs_pages .pageiid .titre {
   color: azure;
   padding: 10px;
 }
-.pageiid soustitre {
+main.blogs_pages .pageiid soustitre {
   display: flex;
   gap: 10px;
 }
-
-article {
+main.blogs_pages article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -469,22 +467,21 @@ article {
   margin: 2rem;
   color: #717171;
 }
-article h1 {
+main.blogs_pages article h1 {
   color: #fefefe;
   font-size: 28px;
   margin: 20px;
 }
-article img {
+main.blogs_pages article img {
   width: 90%;
   height: auto;
   margin: 2rem;
 }
-
-.promotions .promotions_img {
+main.blogs_pages .promotions .promotions_img {
   display: flex;
   justify-content: center;
 }
-.promotions .promotions_subtitle {
+main.blogs_pages .promotions .promotions_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -492,25 +489,25 @@ article img {
   grid-row-gap: 10px;
   padding: 20px;
 }
-.promotions .promotions_subtitle .promotions_date {
+main.blogs_pages .promotions .promotions_subtitle .promotions_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-.promotions .promotions_subtitle .promotions_member {
+main.blogs_pages .promotions .promotions_subtitle .promotions_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-.promotions .promotions_subtitle .promotions_comments {
+main.blogs_pages .promotions .promotions_subtitle .promotions_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-.promotions .promotions_description {
+main.blogs_pages .promotions .promotions_description {
   padding: 20px;
 }
-.promotions .readmore {
+main.blogs_pages .promotions .readmore {
   background-color: #222222;
   color: #717171;
   border: 1px solid #717171;
@@ -519,14 +516,13 @@ article img {
   padding-right: 10px;
   margin-left: 20px;
 }
-.promotions .readmore p {
+main.blogs_pages .promotions .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
-
-.teambuilding .teambuilding_subtitle {
+main.blogs_pages .teambuilding .teambuilding_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -534,25 +530,25 @@ article img {
   grid-row-gap: 10px;
   padding: 20px;
 }
-.teambuilding .teambuilding_subtitle .teambuilding_date {
+main.blogs_pages .teambuilding .teambuilding_subtitle .teambuilding_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-.teambuilding .teambuilding_subtitle .teambuilding_member {
+main.blogs_pages .teambuilding .teambuilding_subtitle .teambuilding_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-.teambuilding .teambuilding_subtitle .teambuilding_comments {
+main.blogs_pages .teambuilding .teambuilding_subtitle .teambuilding_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-.teambuilding .teambuilding_description {
+main.blogs_pages .teambuilding .teambuilding_description {
   padding: 20px;
 }
-.teambuilding .readmore {
+main.blogs_pages .teambuilding .readmore {
   background-color: #222222;
   color: #717171;
   border: 1px solid #717171;
@@ -561,14 +557,13 @@ article img {
   padding-right: 10px;
   margin-left: 20px;
 }
-.teambuilding .readmore p {
+main.blogs_pages .teambuilding .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
-
-.corporateevents .corporateevents_subtitle {
+main.blogs_pages .corporateevents .corporateevents_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -576,25 +571,25 @@ article img {
   grid-row-gap: 10px;
   padding: 20px;
 }
-.corporateevents .corporateevents_subtitle .corporateevents_date {
+main.blogs_pages .corporateevents .corporateevents_subtitle .corporateevents_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-.corporateevents .corporateevents_subtitle .corporateevents_member {
+main.blogs_pages .corporateevents .corporateevents_subtitle .corporateevents_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-.corporateevents .corporateevents_subtitle .corporateevents_comments {
+main.blogs_pages .corporateevents .corporateevents_subtitle .corporateevents_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-.corporateevents .corporateevents_description {
+main.blogs_pages .corporateevents .corporateevents_description {
   padding: 20px;
 }
-.corporateevents .readmore {
+main.blogs_pages .corporateevents .readmore {
   background-color: #222222;
   color: #717171;
   border: 1px solid #717171;
@@ -603,65 +598,63 @@ article img {
   padding-right: 10px;
   margin-left: 20px;
 }
-.corporateevents .readmore p {
+main.blogs_pages .corporateevents .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
-
-.pages {
+main.blogs_pages .pages {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
-.pages button {
+main.blogs_pages .pages button {
   padding: 1rem;
   border-radius: 50%;
   background-color: #f60b0e;
   color: #fefefe;
 }
-
-.section {
+main.blogs_pages .section {
   width: 100%;
   padding: 2rem;
 }
-.section h3 {
+main.blogs_pages .section h3 {
   color: #fefefe;
 }
-.section h3::after {
+main.blogs_pages .section h3::after {
   content: "";
   width: 10%;
   height: 2px;
   border-radius: 5px;
   background: #717171;
 }
-.section li {
+main.blogs_pages .section li {
   color: #717171;
   margin: 20px;
 }
-.section .Instagram_img {
+main.blogs_pages .section .Instagram_img {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 0px;
 }
-.section img {
+main.blogs_pages .section img {
   width: 100%;
 }
-.section .recent_posts li {
+main.blogs_pages .section .recent_posts li {
   display: flex;
   flex-direction: row;
   width: 100%;
   font-size: 12px;
 }
-.section .recent_posts li date {
+main.blogs_pages .section .recent_posts li date {
   display: flex;
   flex-direction: row;
 }
-.section .recent_posts li date::after {
+main.blogs_pages .section .recent_posts li date::after {
   content: "";
   width: 5%;
   height: 2px;
