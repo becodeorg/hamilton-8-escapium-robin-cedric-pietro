@@ -22,6 +22,41 @@ body {
 	overflow-x: hidden;
 	transition: $transition-5;
 	
+	div.round-icon-slashed {
+		width: 6em;
+		aspect-ratio: 1/1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px solid $global-font-color;
+		border-radius: 100px;
+		position: relative;
+		
+		i {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 2.5rem;
+			color: $white-background;
+			width: 100%;
+			height: 100%;
+			border-radius: 100px;
+			background: $dark-background;
+			position: relative;
+			z-index: 600;
+		}
+		
+		&::before {
+			content: "";
+			width: 150%;
+			height: 2px;
+			background: $global-font-color;
+			position: absolute;
+			transform: rotate(-55deg);
+			z-index: 500;
+		}
+	}
+	
 	&::before {
 		transition: $transition-5;
 		content: "";

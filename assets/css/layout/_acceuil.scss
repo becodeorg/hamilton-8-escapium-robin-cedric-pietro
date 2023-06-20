@@ -129,5 +129,35 @@ main.home {
 				}
 			}
 		}
+		
+		&:nth-child(3) {
+			width: 100%;
+			min-height: 100vh;
+			background: $dark-background;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 5vh;
+			
+			h2 {
+				color: $white-background;
+				font-size: 1.5em;
+			}
+			
+			article {
+				width: 90%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 3rem;
+				
+				p {
+					color: $global-font-color;
+					text-align: center;
+				}
+			}
+		}
 	}
 }
