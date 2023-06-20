@@ -6,7 +6,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	background: $dark-background;
-	padding: 0 1rem;
+	padding-right: 1rem;
 	
 	figure {
 		height: 100%;
@@ -36,6 +36,7 @@ header {
 		&.left-0 {
 			left: 0;
 		}
+		
 		ul {
 			width: 100%;
 			display: flex;
@@ -52,21 +53,6 @@ header {
 				justify-content: space-between;
 				position: relative;
 				border-bottom: 2px solid hsla(0, 100%, 100%, 0.1);
-				
-				&::after {
-					position: absolute;
-					content: "";
-					width: 50%;
-					height: 2px;
-					background: $red;
-					transform: rotate(-45deg);
-					opacity: 0;
-					transition: $transition-5;
-				}
-				
-				&:hover::after {
-					opacity: 1;
-				}
 				
 				a {
 					width: 100%;
@@ -141,7 +127,8 @@ header {
 
 @media screen and (min-width: 799px) {
 	header {
-		padding: 0 3em 0 0;
+		padding: 0;
+		padding-right: 3em;
 		
 		nav {
 			position: unset;
@@ -157,6 +144,21 @@ header {
 				
 				li {
 					border: none;
+					
+					&::after, &.active::after {
+						position: absolute;
+						content: "";
+						width: 50%;
+						height: 2px;
+						background: $red;
+						transform: rotate(-45deg);
+						opacity: 0;
+						transition: $transition-5;
+					}
+					
+					&:hover::after, &.active::after {
+						opacity: 1;
+					}
 					
 					a {
 						color: hsla(0, 100%, 100%, 0.7);

@@ -1,6 +1,8 @@
 let burgerBtn = document.getElementById("burger")
 let body = document.body
 let menu = document.getElementById("menu")
+let lis = menu.children[0].children
+let active = header.getAttribute("data-value")
 
 burgerBtn.addEventListener('click', () => {
 	if (body.classList.contains("opacity-7")) {
@@ -21,3 +23,12 @@ burgerBtn.addEventListener('click', () => {
 		burgerBtn.classList.add("on-click")
 	}
 })
+
+
+for (let i = 0; i < lis.length; i++) {
+	
+	if ((i + 1) === parseInt(active)) {
+		lis[i].classList.add("active")
+		break
+	}
+}
