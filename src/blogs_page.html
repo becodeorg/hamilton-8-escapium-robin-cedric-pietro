@@ -6,6 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="/assets/css/style.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7b1b14c1ce.js" crossorigin="anonymous" defer></script>
+        <script defer>
+			$(function() {
+
+				$("#header").load("/src/_header.html")
+				$("#footer").load("/src/_footer.html")
+			});
+		</script>
 		<title>Escapium</title>
 	</head>
 	<body>
@@ -136,15 +143,15 @@
                     <li><date>04/04 /2018</date><p>PERFECT FOR TEAM BUILDING</p></li>
                 </ul> 
                 <h3>Tags</h3>
-                <ul>
-                    <li><button>Clock</button></li>
-                    <li><button>escape</button></li>
-                    <li><button>Game</button></li>
-                    <li><button>mechanisms</button></li>
-                    <li><button>mystery</button></li>
-                    <li><button>promo</button></li>
-                    <li><button>puzzle</button></li>
-                    <li><button>room</button></li> 
+                <ul class="tags_ul">
+                    <li><button class="tags_button">Clock</button></li>
+                    <li><button class="tags_button">escape</button></li>
+                    <li><button class="tags_button">Game</button></li>
+                    <li><button class="tags_button">mechanisms</button></li>
+                    <li><button class="tags_button">mystery</button></li>
+                    <li><button class="tags_button">promo</button></li>
+                    <li><button class="tags_button">puzzle</button></li>
+                    <li><button class="tags_button">room</button></li> 
                 </ul>
                 <h3>Instagram</h3>
                 <div class="Instagram_img">
@@ -155,7 +162,7 @@
                     <img class="img5" src="/assets/resources/images/gallery/gallery-8.jpg" alt="">
                     <img class="img6" src="/assets/resources/images/gallery/gallery-4.jpg" alt="">
                 </div>
-                <button class="Instagram_button"><i class="fa-brands fa-instagram" style="color:  #717171;"></i>Follow on instagram</button>
+                <button class="Instagram_button"><i class="fa-brands fa-instagram" style="color:  #717171;"></i><p>Follow on instagram</p></button>
                 <h3>Archives</h3>
                 <ul>
                     <li>september 2018</li>
@@ -168,13 +175,6 @@
              </section>   
 		</main>
 		<footer id="footer"></footer>
-		<script>
-			$(function() {
-
-				$("#header").load("/src/_header.html")
-				$("#footer").load("/src/_footer.html")
-			});
-		</script>
-		<script src="https://kit.fontawesome.com/513e9627f7.js" crossorigin="anonymous"></script>
+		
 	</body>
 </html>
