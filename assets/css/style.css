@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 * {
   font-size: 14px;
@@ -181,12 +182,14 @@ body.opacity-7::before {
 
 header {
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: #222222;
+  background: hsla(0, 0%, 0%, 0.4);
   padding-right: 1rem;
 }
 header figure {
@@ -389,6 +392,8 @@ header div#burger.on-click span:nth-child(3) {
   }
   header section:nth-child(2) div.search-containers input:focus {
     border-color: #f60b0e;
+    width: 100%;
+    opacity: 1;
   }
   header section:nth-child(2) div.search-containers button {
     background: transparent;
@@ -410,7 +415,12 @@ footer {
   min-height: 50vh;
   display: flex;
   flex-direction: column;
-  background: #222222;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  background-size: cover;
+  background-image: url("../resources/images/gallery/room-7.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  position: relative;
 }
 footer span,
 footer h2,
@@ -531,15 +541,127 @@ footer section:nth-child(2) cite {
     flex-direction: row;
   }
 }
-body {
+main.home {
+  width: 100%;
+}
+main.home > section {
+  width: 100%;
+  min-height: 30vh;
+}
+main.home > section:nth-child(1) {
+  min-height: 50vh;
+  background-image: url("../resources/images/gallery/slide-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+main.home > section:nth-child(1) h2 {
+  font-size: 4rem;
+  text-align: center;
+  color: #fefefe;
+}
+main.home > section:nth-child(1) a {
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: hsla(0, 100%, 100%, 0.5);
+  text-transform: uppercase;
+}
+main.home > section:nth-child(1) a:hover {
+  color: #fefefe;
+}
+main.home > section:nth-child(2) {
+  width: 100%;
+  min-height: 100vh;
+  background: #1b1b1b;
+  box-shadow: 0px -10vh 10vh #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10vh;
+  padding: 5vh 2vw;
+}
+main.home > section:nth-child(2)::before  {
+  content: "";
+  width: 5vw;
+  height: 2px;
+  border-radius: 2px;
+  background: #717171;
+}
+main.home > section:nth-child(2) h2 {
+  color: #fefefe;
+  font-size: 2em;
+}
+main.home > section:nth-child(2) section {
+  width: 100%;
+  background: #222222;
+}
+main.home > section:nth-child(2) section figure {
+  width: 100%;
+}
+main.home > section:nth-child(2) section figure img {
+  width: 100%;
+  background-size: cover;
+}
+main.home > section:nth-child(2) section article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2em 2.5em;
+}
+main.home > section:nth-child(2) section article > span span {
+  font-size: 1.3em;
+  color: #717171;
+}
+main.home > section:nth-child(2) section article > span span.red {
+  color: #f60b0e;
+}
+main.home > section:nth-child(2) section article h3,
+main.home > section:nth-child(2) section article a {
+  color: #fefefe;
+}
+main.home > section:nth-child(2) section article p {
+  color: #717171;
+}
+main.home > section:nth-child(2) section article a {
+  padding: 1em 2em;
+  border-radius: 50px;
+  background: #f60b0e;
+  font-weight: 600;
+  position: relative;
+}
+main.home > section:nth-child(2) section article a:hover {
+  color: #1b1b1b;
+  background: #fefefe;
+}
+main.home > section:nth-child(2) section article div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5em;
+}
+main.home > section:nth-child(2) section article div p i {
+  color: hsla(0, 100%, 100%, 0.5);
+  font-size: 1.1em;
+  margin-right: 1rem;
+}
+
+main.blogs {
   background-color: black;
 }
-
-.line {
+main.blogs .line {
   border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
 }
-
-.pageiid {
+main.blogs .pageiid {
   width: 100%;
   height: 300px;
   display: flex;
@@ -551,16 +673,15 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-.pageiid .titre {
+main.blogs .pageiid .titre {
   color: azure;
   padding: 10px;
 }
-.pageiid soustitre {
+main.blogs .pageiid soustitre {
   display: flex;
   gap: 10px;
 }
-
-article {
+main.blogs article {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -568,18 +689,17 @@ article {
   margin: 2rem;
   color: #a7a8a9;
 }
-article h1 {
+main.blogs article h1 {
   color: azure;
   font-size: 28px;
   margin: 20px;
 }
-article img {
+main.blogs article img {
   width: 90%;
   height: auto;
   margin: 2rem;
 }
-
-.promotions .promotions_subtitle {
+main.blogs .promotions .promotions_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -587,38 +707,37 @@ article img {
   grid-row-gap: 10px;
   padding: 20px;
 }
-.promotions .promotions_subtitle .promotions_date {
+main.blogs .promotions .promotions_subtitle .promotions_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-.promotions .promotions_subtitle .promotions_member {
+main.blogs .promotions .promotions_subtitle .promotions_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-.promotions .promotions_subtitle .promotions_comments {
+main.blogs .promotions .promotions_subtitle .promotions_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-.promotions .promotions_description {
+main.blogs .promotions .promotions_description {
   padding: 20px;
 }
-.promotions .promotions_button {
+main.blogs .promotions .promotions_button {
   background-color: #222222;
   color: #a7a8a9;
   border: 1px solid #a7a8a9;
   border-radius: 20px;
 }
-.promotions .promotions_button p {
+main.blogs .promotions .promotions_button p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
-
-.teambuilding .teambuilding_subtitle {
+main.blogs .teambuilding .teambuilding_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -626,38 +745,37 @@ article img {
   grid-row-gap: 10px;
   padding: 20px;
 }
-.teambuilding .teambuilding_subtitle .teambuilding_date {
+main.blogs .teambuilding .teambuilding_subtitle .teambuilding_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-.teambuilding .teambuilding_subtitle .teambuilding_member {
+main.blogs .teambuilding .teambuilding_subtitle .teambuilding_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-.teambuilding .teambuilding_subtitle .teambuilding_comments {
+main.blogs .teambuilding .teambuilding_subtitle .teambuilding_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-.teambuilding .teambuilding_description {
+main.blogs .teambuilding .teambuilding_description {
   padding: 20px;
 }
-.teambuilding .teambuilding_button {
+main.blogs .teambuilding .teambuilding_button {
   background-color: #222222;
   color: #a7a8a9;
   border: 1px solid #a7a8a9;
   border-radius: 20px;
 }
-.teambuilding .teambuilding_button p {
+main.blogs .teambuilding .teambuilding_button p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
-
-.corporateevents .corporateevents_subtitle {
+main.blogs .corporateevents .corporateevents_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -665,31 +783,31 @@ article img {
   grid-row-gap: 10px;
   padding: 20px;
 }
-.corporateevents .corporateevents_subtitle .corporateevents_date {
+main.blogs .corporateevents .corporateevents_subtitle .corporateevents_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-.corporateevents .corporateevents_subtitle .corporateevents_member {
+main.blogs .corporateevents .corporateevents_subtitle .corporateevents_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-.corporateevents .corporateevents_subtitle .corporateevents_comments {
+main.blogs .corporateevents .corporateevents_subtitle .corporateevents_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-.corporateevents .corporateevents_description {
+main.blogs .corporateevents .corporateevents_description {
   padding: 20px;
 }
-.corporateevents .corporateevents_button {
+main.blogs .corporateevents .corporateevents_button {
   background-color: #222222;
   color: #a7a8a9;
   border: 1px solid #a7a8a9;
   border-radius: 20px;
 }
-.corporateevents .corporateevents_button p {
+main.blogs .corporateevents .corporateevents_button p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
