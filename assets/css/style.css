@@ -80,7 +80,7 @@ body.opacity-7::before {
 .howToPlay__whoShouldPlay {
   margin-top: 20%;
 }
-.howToPlay__whoShouldPlay__fa-sharp--fa-regular--fa-user {
+.howToPlay__whoShouldPlay__fa-sharp fa-regular fa-user {
   border: 1px #717171 solid;
   border-radius: 20px;
 }
