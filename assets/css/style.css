@@ -434,7 +434,7 @@ main.blogs_pages h3 {
 }
 main.blogs_pages h3::after {
   content: "";
-  width: 60%;
+  width: 40%;
   height: 2px;
   border-radius: 5px;
   background: #717171;
@@ -459,7 +459,7 @@ main.blogs_pages .pageiid soustitre {
   display: flex;
   gap: 10px;
 }
-main.blogs_pages article {
+main.blogs_pages .promotions, main.blogs_pages .teambuilding, main.blogs_pages .corporateevents {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -467,21 +467,21 @@ main.blogs_pages article {
   margin: 2rem;
   color: #717171;
 }
-main.blogs_pages article h1 {
+main.blogs_pages .promotions h1, main.blogs_pages .teambuilding h1, main.blogs_pages .corporateevents h1 {
   color: #fefefe;
   font-size: 28px;
   margin: 20px;
 }
-main.blogs_pages article img {
+main.blogs_pages .promotions img, main.blogs_pages .teambuilding img, main.blogs_pages .corporateevents img {
   width: 90%;
   height: auto;
   margin: 2rem;
 }
-main.blogs_pages .promotions .promotions_img {
+main.blogs_pages .promotions .promotions_img, main.blogs_pages .promotions .teambuilding_img, main.blogs_pages .promotions .corporateevents_img, main.blogs_pages .teambuilding .promotions_img, main.blogs_pages .teambuilding .teambuilding_img, main.blogs_pages .teambuilding .corporateevents_img, main.blogs_pages .corporateevents .promotions_img, main.blogs_pages .corporateevents .teambuilding_img, main.blogs_pages .corporateevents .corporateevents_img {
   display: flex;
   justify-content: center;
 }
-main.blogs_pages .promotions .promotions_subtitle {
+main.blogs_pages .promotions .promotions_subtitle, main.blogs_pages .teambuilding .promotions_subtitle, main.blogs_pages .corporateevents .promotions_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -489,25 +489,25 @@ main.blogs_pages .promotions .promotions_subtitle {
   grid-row-gap: 10px;
   padding: 20px;
 }
-main.blogs_pages .promotions .promotions_subtitle .promotions_date {
+main.blogs_pages .promotions .promotions_subtitle .promotions_date, main.blogs_pages .teambuilding .promotions_subtitle .promotions_date, main.blogs_pages .corporateevents .promotions_subtitle .promotions_date {
   grid-area: 1/1/2/2;
   display: flex;
   gap: 5px;
 }
-main.blogs_pages .promotions .promotions_subtitle .promotions_member {
+main.blogs_pages .promotions .promotions_subtitle .promotions_member, main.blogs_pages .teambuilding .promotions_subtitle .promotions_member, main.blogs_pages .corporateevents .promotions_subtitle .promotions_member {
   grid-area: 1/2/2/3;
   display: flex;
   gap: 5px;
 }
-main.blogs_pages .promotions .promotions_subtitle .promotions_comments {
+main.blogs_pages .promotions .promotions_subtitle .promotions_comments, main.blogs_pages .teambuilding .promotions_subtitle .promotions_comments, main.blogs_pages .corporateevents .promotions_subtitle .promotions_comments {
   grid-area: 2/1/3/2;
   display: flex;
   gap: 5px;
 }
-main.blogs_pages .promotions .promotions_description {
+main.blogs_pages .promotions .promotions_description, main.blogs_pages .teambuilding .promotions_description, main.blogs_pages .corporateevents .promotions_description {
   padding: 20px;
 }
-main.blogs_pages .promotions .readmore {
+main.blogs_pages .promotions .readmore, main.blogs_pages .teambuilding .readmore, main.blogs_pages .corporateevents .readmore {
   background-color: #222222;
   color: #717171;
   border: 1px solid #717171;
@@ -516,7 +516,7 @@ main.blogs_pages .promotions .readmore {
   padding-right: 10px;
   margin-left: 20px;
 }
-main.blogs_pages .promotions .readmore p {
+main.blogs_pages .promotions .readmore p, main.blogs_pages .teambuilding .readmore p, main.blogs_pages .corporateevents .readmore p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -643,6 +643,16 @@ main.blogs_pages .section .Instagram_img {
 }
 main.blogs_pages .section img {
   width: 100%;
+}
+main.blogs_pages .section .Instagram_button {
+  background-color: #1b1b1b;
+  color: #fefefe;
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 40px;
+}
+main.blogs_pages .section .Instagram_button .fa-instagram {
+  margin-right: 0.5rem;
 }
 main.blogs_pages .section .recent_posts li {
   display: flex;

@@ -8,7 +8,7 @@ h3{
     margin: 20px;
     &::after{ 
         content: "";
-        width: 60%;
+        width: 40%;
         height: 2px;
         border-radius: 5px;
         background:  $global-font-color;
@@ -37,7 +37,7 @@ h3{
         gap: 10px;
     }
 }
-article{
+.promotions, .teambuilding, .corporateevents{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -57,12 +57,13 @@ article{
        
        
 }
+.promotions_img, .teambuilding_img, .corporateevents_img{
+    display: flex;
+    justify-content: center;
 
 }
 .promotions{  
-    .promotions_img{
-        display: flex;
-        justify-content: center;
+    
     }
     .promotions_subtitle{
         display: grid;
@@ -250,10 +251,20 @@ article{
         
         }
         
-        
-
         img{
             width: 100%;
+        }
+        .Instagram_button{
+            background-color: $darkest-background;
+            color: $white-background;
+            padding: 1rem;
+            margin: 0.5rem;
+            border-radius: 40px;
+
+            .fa-instagram{
+                margin-right: 0.5rem;;
+
+            }
         }
         .recent_posts{
             li{
