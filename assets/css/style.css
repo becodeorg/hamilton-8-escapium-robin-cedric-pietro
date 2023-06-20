@@ -72,72 +72,77 @@ body.opacity-7::before {
     display: none;
   }
 }
-.howToPlay {
+.about .howToPlay {
   background-color: #1b1b1b;
   text-align: center;
   color: #717171;
   padding: 5%;
 }
-.howToPlay__title {
+.about .howToPlay__title {
   color: #fefefe;
   padding-top: 10%;
 }
-.howToPlay__whoShouldPlay {
+.about .howToPlay__whoShouldPlay {
   margin-top: 20%;
 }
-.howToPlay__whoShouldPlay__fa-sharp fa-regular fa-user {
+.about .howToPlay__whoShouldPlay__fa-sharp fa-regular fa-user {
   border: 1px #717171 solid;
   border-radius: 20px;
 }
-.howToPlay__whoShouldPlay__title {
+.about .howToPlay__whoShouldPlay__title {
   color: #fefefe;
   padding: 5%;
 }
-.howToPlay__forTeamBuilding {
+.about .howToPlay__forTeamBuilding {
   margin-top: 20%;
 }
-.howToPlay__forTeamBuilding__title {
+.about .howToPlay__forTeamBuilding__title {
   color: #fefefe;
   padding: 5%;
 }
-.howToPlay__forSpecialEvents {
+.about .howToPlay__forSpecialEvents {
   margin-top: 20%;
 }
-.howToPlay__forSpecialEvents__title {
+.about .howToPlay__forSpecialEvents__title {
   color: #fefefe;
   padding: 5%;
 }
-
-.certificates {
+.about .certificates {
   text-align: center;
   background-color: #1b1b1b;
   padding-bottom: 5%;
 }
-.certificates__title {
+.about .certificates__title {
   padding-bottom: 10%;
   color: #fefefe;
 }
-.certificates__grid__item {
+.about .certificates__grid__item {
   margin-bottom: 5%;
 }
-
-.ourTeam__article {
+.about .ourTeam {
+  text-align: center;
+  background-color: #222222;
+  padding: 5% 0 5% 0;
+}
+.about .ourTeam__article {
+  text-align: center;
   background-color: #222222;
 }
-.ourTeam__article__members {
+.about .ourTeam__article__members {
   padding-top: 10%;
 }
-.ourTeam__article__titleTwo {
+.about .ourTeam__article__titleTwo {
   color: #fefefe;
+  text-align: center;
   padding-top: 5%;
 }
-.ourTeam__article__titleThree {
+.about .ourTeam__article__titleThree {
   color: #717171;
+  text-align: center;
   padding-bottom: 5%;
   font-size: 10px;
 }
-
-.whatPeopleSay {
+.about .whatPeopleSay {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -145,28 +150,33 @@ body.opacity-7::before {
   text-align: center;
   padding-top: 10%;
 }
-.whatPeopleSay__title {
+.about .whatPeopleSay__title {
   color: #fefefe;
   padding: 5% 0 5% 0;
 }
-.whatPeopleSay__link {
+.about .whatPeopleSay__link {
   color: red;
   font-size: 10px;
   text-decoration: underline;
   padding-bottom: 10%;
 }
-.whatPeopleSay__citation {
+.about .whatPeopleSay__citation {
   padding: 0 8% 8% 8%;
   color: #717171;
 }
-.whatPeopleSay__image {
+.about .whatPeopleSay__image {
   width: 20%;
   height: 20%;
   padding: 2%;
 }
-.whatPeopleSay__figName {
+.about .whatPeopleSay__figName {
   color: #717171;
   padding: 3%;
+}
+.about .blogs {
+  background-color: #fefefe;
+  text-align: center;
+  font-size: 10px;
 }
 
 header {
