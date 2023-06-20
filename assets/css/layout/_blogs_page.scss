@@ -55,13 +55,13 @@ h3{
         margin: 2rem;
        
 }
-
+.promotions_img, .teambuilding_img, .corporateevents_img{
+    display: flex;
+    justify-content: center;
+}
 }
 .promotions{  
-    .promotions_img{
-        display: flex;
-        justify-content: center;
-    }
+    
     .promotions_subtitle{
         display: grid;
         grid-template-columns: repeat(2, 1fr) ;

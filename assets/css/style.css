@@ -603,11 +603,11 @@ main.blogs h3::after {
   height: auto;
   margin: 2rem;
 }
-
-.promotions .promotions_img {
+.promotions .promotions_img, .promotions .teambuilding_img, .promotions .corporateevents_img, .teambuilding .promotions_img, .teambuilding .teambuilding_img, .teambuilding .corporateevents_img, .corporateevents .promotions_img, .corporateevents .teambuilding_img, .corporateevents .corporateevents_img {
   display: flex;
   justify-content: center;
 }
+
 .promotions .promotions_subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
