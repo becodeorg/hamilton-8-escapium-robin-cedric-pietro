@@ -1,0 +1,156 @@
+footer {
+	width: 100vw;
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	background: $dark-background;
+	
+	span,
+	h2,
+	li,
+	a {
+		color: $white-background;
+	}
+	
+	section {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 2em;
+		padding: 10vh 1em;
+		
+		article {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 1em;
+			background: none;
+			
+			div {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: flex-start;
+				gap: 5vw;
+				
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 1em;
+				}
+			}
+			
+			ul, h2 {
+				margin-left: 1.5rem;
+				
+				li {
+					color: $global-font-color;
+					
+					em {
+						color: $white-background;
+					}
+				} 
+			}
+			
+			span {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 1em;
+				color: $global-font-color;
+				
+				&::after{
+					content: "";
+					width: 2em;
+					height: 2px;
+					border-radius: 5px;
+					background: $red;
+				}
+			}
+			
+			&:first-child {
+				ul li {
+					
+					&:first-child,
+					&:nth-child(4) {
+						margin-top: 1em;
+					}
+				}
+			}
+			
+			&.link {
+				
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 1em;
+					margin-top: 2em;
+					
+					a {
+						color: $global-font-color;
+						text-transform: uppercase;
+						font-weight: 400;
+						letter-spacing: 1px;
+						font-size: 0.8em;
+						
+						&:hover {
+							color: $white-background;
+						}
+					}
+				}
+			}
+			
+			&:last-child {
+				ul {
+					width: 70%;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: wrap;
+					gap: 1em;
+					
+					li a {
+						width: 1.5em;
+						aspect-ratio: 1/1;
+						background: hsla(0, 0%, 44%, 0.1);
+						border-radius: 50px;
+						transition: $transition-5;
+						font-size: 2rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						
+						&:hover {
+							background: $white-background;
+							color: $darkest-background;
+						}
+					}
+				}
+			}
+		}
+		
+		&:nth-child(2) {
+			align-items: center;
+			justify-content: center;
+			background: $darkest-background;
+			padding: 2em;
+			padding-top: 3em;
+			
+			cite {
+				color: $global-font-color;
+				font-style: normal;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 769px) {
+	section:first-child {
+		flex-direction: row;
+	}
+}

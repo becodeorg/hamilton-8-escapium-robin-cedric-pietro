@@ -13,6 +13,9 @@ a {
 em, i {
 	font-style: normal;
 }
+ul {
+	list-style-type: none;
+}
 body {
 	width: 100vw;
 	min-height: 100vh;
@@ -25,7 +28,7 @@ body {
 		width: 100vw;
 		height: 100vh;
 		position: fixed;
-		top: 0;
+		right: -100vw;
 		z-index: 700;
 		background: transparent;
 	}
@@ -34,6 +37,7 @@ body {
 		overflow: hidden;
 		
 		&::before {
+			right: 0;
 			background: hsla(0, 0%, 0%, 0.7);
 		}
 	}
