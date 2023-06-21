@@ -1134,14 +1134,6 @@ main.home > section:nth-child(8) a {
     flex-direction: row;
   }
 }
-main.blogs {
-  background-color: black;
-}
-main.blogs h3 {
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-}
 main.blogs_pages {
   background-color: black;
 }
