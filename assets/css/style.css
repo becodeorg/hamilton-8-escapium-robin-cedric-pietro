@@ -643,7 +643,7 @@ main.blogs_pages .pageiid soustitre {
   display: flex;
   gap: 0.8rem;
 }
-main.blogs_pages .promotions, main.blogs_pages .teambuilding, main.blogs_pages .corporateevents {
+main.blogs_pages .txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -651,21 +651,12 @@ main.blogs_pages .promotions, main.blogs_pages .teambuilding, main.blogs_pages .
   margin: 2rem;
   color: #a7a8a9;
 }
-main.blogs_pages .promotions h1, main.blogs_pages .teambuilding h1, main.blogs_pages .corporateevents h1 {
+main.blogs_pages .txt h1 {
   color: azure;
   font-size: 28px;
   margin: 20px;
 }
-main.blogs_pages .promotions img, main.blogs_pages .teambuilding img, main.blogs_pages .corporateevents img {
-  width: 90%;
-  height: auto;
-  margin: 2rem;
-}
-main.blogs_pages .promotions .promotions_img, main.blogs_pages .promotions .teambuilding_img, main.blogs_pages .promotions .corporateevents_img, main.blogs_pages .teambuilding .promotions_img, main.blogs_pages .teambuilding .teambuilding_img, main.blogs_pages .teambuilding .corporateevents_img, main.blogs_pages .corporateevents .promotions_img, main.blogs_pages .corporateevents .teambuilding_img, main.blogs_pages .corporateevents .corporateevents_img {
-  display: flex;
-  justify-content: center;
-}
-main.blogs_pages .promotions .readmore, main.blogs_pages .teambuilding .readmore, main.blogs_pages .corporateevents .readmore {
+main.blogs_pages .txt .readmore {
   width: 40%;
   display: flex;
   justify-content: center;
@@ -676,7 +667,16 @@ main.blogs_pages .promotions .readmore, main.blogs_pages .teambuilding .readmore
   border: 1px solid;
   margin-bottom: 1rem;
 }
-main.blogs_pages .promotions .promotions_subtitle {
+main.blogs_pages .img {
+  display: flex;
+  justify-content: center;
+}
+main.blogs_pages .img img {
+  width: auto;
+  height: auto;
+  margin: 2rem;
+}
+main.blogs_pages .article .subtitle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -684,107 +684,28 @@ main.blogs_pages .promotions .promotions_subtitle {
   grid-row-gap: 10px;
   padding: 20px;
 }
-main.blogs_pages .promotions .promotions_subtitle .promotions_date {
-  grid-area: 1/1/2/2;
+main.blogs_pages .article .subtitle .date {
   display: flex;
   gap: 5px;
 }
-main.blogs_pages .promotions .promotions_subtitle .promotions_member {
-  grid-area: 1/2/2/3;
+main.blogs_pages .article .subtitle .member {
   display: flex;
   gap: 5px;
 }
-main.blogs_pages .promotions .promotions_subtitle .promotions_comments {
-  grid-area: 2/1/3/2;
+main.blogs_pages .article .subtitle .comments {
   display: flex;
   gap: 5px;
 }
-main.blogs_pages .promotions .promotions_description {
+main.blogs_pages .article .description {
   padding: 20px;
 }
-main.blogs_pages .promotions .promotions_button {
+main.blogs_pages .article .button {
   background-color: #222222;
   color: #a7a8a9;
   border: 1px solid #a7a8a9;
   border-radius: 20px;
 }
-main.blogs_pages .promotions .promotions_button p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-main.blogs_pages .teambuilding .teambuilding_subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 20px;
-}
-main.blogs_pages .teambuilding .teambuilding_subtitle .teambuilding_date {
-  grid-area: 1/1/2/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs_pages .teambuilding .teambuilding_subtitle .teambuilding_member {
-  grid-area: 1/2/2/3;
-  display: flex;
-  gap: 5px;
-}
-main.blogs_pages .teambuilding .teambuilding_subtitle .teambuilding_comments {
-  grid-area: 2/1/3/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs_pages .teambuilding .teambuilding_description {
-  padding: 20px;
-}
-main.blogs_pages .teambuilding .teambuilding_button {
-  background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
-  border-radius: 20px;
-}
-main.blogs_pages .teambuilding .teambuilding_button p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-main.blogs_pages .corporateevents .corporateevents_subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 20px;
-}
-main.blogs_pages .corporateevents .corporateevents_subtitle .corporateevents_date {
-  grid-area: 1/1/2/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs_pages .corporateevents .corporateevents_subtitle .corporateevents_member {
-  grid-area: 1/2/2/3;
-  display: flex;
-  gap: 5px;
-}
-main.blogs_pages .corporateevents .corporateevents_subtitle .corporateevents_comments {
-  grid-area: 2/1/3/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs_pages .corporateevents .corporateevents_description {
-  padding: 20px;
-}
-main.blogs_pages .corporateevents .corporateevents_button {
-  background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
-  border-radius: 20px;
-}
-main.blogs_pages .corporateevents .corporateevents_button p {
+main.blogs_pages .article .button p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 10px;
@@ -864,7 +785,7 @@ main.blogs_pages .section .recent_posts li date::after {
 main.blogs_pages .section .tags_ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr) 0fr;
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -875,6 +796,60 @@ main.blogs_pages .section .tags_ul li {
 main.blogs_pages .section .tags_ul .tags_button {
   border-radius: 1rem;
   padding: 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  main.blogs_pages .container {
+    display: flex;
+  }
+  main.blogs_pages .container .article {
+    width: 100%;
+    margin: 5rem;
+  }
+  main.blogs_pages .container .section {
+    margin: 4rem;
+    width: 50%;
+  }
+  main.blogs_pages .container .section h3 {
+    margin-top: 3rem;
+  }
+  main.blogs_pages .container .section .Instagram_img {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0px;
+    padding-left: 1rem;
+  }
+  main.blogs_pages .container .section .tags_ul {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  main.blogs_pages .container {
+    display: flex;
+    padding: 10rem;
+  }
+  main.blogs_pages .container .article {
+    width: 100%;
+  }
+  main.blogs_pages .container .section {
+    width: 50%;
+  }
+  main.blogs_pages .container .section h3 {
+    margin-top: 3rem;
+  }
+  main.blogs_pages .container .section .Instagram_img {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px;
+    padding-left: 1rem;
+  }
+  main.blogs_pages .container .section .tags_ul {
+    margin-left: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
