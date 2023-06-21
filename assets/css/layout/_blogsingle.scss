@@ -1,0 +1,32 @@
+
+
+main.blogsingle{
+    background-color: black;
+
+
+    .pageid{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url(/assets/resources/images/gallery/slide-1.jpg);
+        background-size: 1920px ; /* Ajustez les valeurs de largeur et hauteur selon vos besoins */
+        background-repeat: no-repeat;
+        background-position:center;
+        
+        
+        .titre{
+            color: azure;
+            padding: 10px;
+        }
+        soustitre{
+            display: flex;
+            gap: 0.8rem;
+        }
+    }
+
+
+
+}
