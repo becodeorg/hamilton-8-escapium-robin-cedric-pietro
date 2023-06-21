@@ -1,6 +1,7 @@
 header {
 	width: 100%;
 	position: absolute;
+	z-index: 400;
 	top: 0;
 	left: 0;
 	display: flex;
@@ -88,8 +89,122 @@ header {
 		}
 	}
 	
+	div.search-containers {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: fixed;
+		bottom: 0;
+		left: -100vw;
+		transition: $transition-5;
+		background: hsla(0, 0%, 0%, 0.8);
+		
+		button {
+			width: 8vw;
+			height: 8vw;
+			border-radius: 100px;
+			border: 2px solid $global-font-color;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: none;
+			position: absolute;
+			top: 5vw;
+			left: 5vw;
+			cursor: pointer;
+			
+			i {
+				color: $global-font-color;
+				font-size: 4vw;
+			}
+			
+			&:hover {
+				border-color: $white-background;
+				
+				i {
+					color: $white-background;
+				}
+			}
+		}
+		
+		input {
+			width: 60vw;
+			padding-bottom: 2vh;
+			background: none;
+			border-bottom: 2px solid $global-font-color;
+			font-size: 2vw;
+			transition: $transition-5;
+			color: $white-background;
+			
+			&:hover {
+				border-color: $white-background;
+			}
+			
+			&:focus {
+				border-color: $red;
+			}
+		}
+		
+		&.left-0 {
+			left: 0;
+		}
+	}
+	
 	section:nth-child(2) {
-		display: none;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 2vw;
+		
+		a {
+			color: $white-background;
+			
+			&:first-child {
+				width: 7vw;
+				height: 7vw;
+				font-weight: 700;
+				border: 2px solid hsla(0, 100%, 100%, 0.5);
+				border-radius: 100px;
+				transition: $transition-5;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				&::after {
+					content: "\f073";
+					font-family: "Font Awesome 5 Free";
+					font-weight: 400;
+				}
+				
+				&:hover {
+					border-color: $white-background;
+				}
+				
+				&:active {
+					border-color: $red;
+				}
+			}
+			
+			&:nth-child(3) {
+				display: none;
+			}
+		}
+		
+		button {
+			cursor: pointer;
+			background: none;
+			color: $white-background;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			i {
+				font-size: 1.2em;
+			}
+		}
 	}
 	
 	div#burger {
@@ -116,8 +231,8 @@ header {
 			}
 			
 			span:nth-child(2) {
-				opacity: 0;
-				transform: translateX(-20px);
+				width: 0;
+				transform: translateX(-10px);
 			}
 			
 			span:nth-child(3) {
@@ -127,10 +242,14 @@ header {
 	}
 }
 
-@media screen and (min-width: 799px) {
+@media screen and (min-width: 768px) {
 	header {
 		padding: 0;
 		padding-right: 3em;
+		
+		a, input {
+			font-size: 1vw;
+		}
 		
 		nav {
 			position: unset;
@@ -142,10 +261,11 @@ header {
 				flex-direction: row;
 				align-items: center;
 				justify-content: center;
-				gap: .5em;
+				gap: .5vw;
 				
 				li {
 					border: none;
+					padding: 1vw 1.5vw;
 					
 					&::after, &.active::after {
 						position: absolute;
@@ -183,90 +303,32 @@ header {
 		}
 		
 		section:nth-child(2) {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
 			
-			a {
-				color: $white-background;
+			a:first-child {
+				width: auto;
+				height: auto;
+				padding: 1em 2em;
+				border-radius: 20px;
 				
-				&:first-child {
-					font-weight: 700;
-					padding: 1em 2em;
-					border: 2px solid hsla(0, 100%, 100%, 0.5);
-					border-radius: 30px;
-					margin-right: 1rem;
-					transition: $transition-5;
-					
-					&:hover {
-						border-color: $white-background;
-					}
-					
-					&:active {
-						border-color: $red;
-					}
-				}
-				
-				&:last-child {
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					justify-content: center;
-					gap: .5em;
-					padding-left: 2em;
-					border-left: 2px solid hsla(0, 100%, 100%, 0.3);
-					margin-left: 2em;
-					text-transform: uppercase;
+				&::after {
+					content: "Book Now!";
+					font-family: 'Hind', sans-serif;
 				}
 			}
 			
-			div.search-containers {
-				width: 250px;
+			a.sign {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				justify-content: flex-end;
-				gap: 2em;
-				
-				input {
-					width: 0;
-					padding: .5em 1.5em;
-					font-weight: 600;
-					color: $white-background;
-					border: 2px solid hsla(0, 100%, 100%, 0.5);
-					background: transparent;
-					transition: $transition-5;
-					border-radius: 30px;
-					opacity: 0;
-					
-					&:hover {
-						border-color: $white-background;
-					}
-					
-					&:focus {
-						border-color: $red;
-						width: 100%;
-						opacity: 1;
-					}
-				}
-				
-				button {
-					background: transparent;
-					
-					i {
-						font-size: 1.2rem;
-						color: $white-background;
-					}
-				}
-				
-				&:hover input {
-					width: 100%;
-					opacity: 1;
-				}
+				justify-content: center;
+				gap: .5em;
+				padding-left: 2em;
+				border-left: 2px solid hsla(0, 100%, 100%, 0.3);
+				margin-left: 2em;
+				text-transform: uppercase;
 			}
 		}
-		
+	
 		div#burger {
 			display: none;
 		}
