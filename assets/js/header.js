@@ -4,6 +4,29 @@ let menu = document.getElementById("menu")
 let lis = menu.children[0].children
 let active = header.getAttribute("data-value")
 
+let closeBtn = document.querySelector(".cross")
+let searchBtn = document.getElementById("button-search")
+let searchContainers = document.querySelector(".search-containers")
+
+closeBtn.addEventListener('click', () => {
+	searchContainers.classList.remove("left-0")
+	body.classList.remove("overflow-hidden")
+})
+
+searchBtn.addEventListener('click', () => {
+	if (searchContainers.classList.contains("left-0")) {
+		searchContainers.classList.remove("left-0")
+	} else {
+		searchContainers.classList.add("left-0")
+	}
+	
+	if (body.classList.contains("overflow-hidden")) {
+		body.classList.remove("overflow-hidden")
+	} else {
+		body.classList.add("overflow-hidden")
+	}
+})
+
 burgerBtn.addEventListener('click', () => {
 	if (body.classList.contains("opacity-7")) {
 		body.classList.remove("opacity-7")
