@@ -39,55 +39,58 @@ h3{
         gap: 0.8rem;
     }
 }
-.txt{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color:#1B1B1B ;
+.articles{
     margin: 2rem;
-    color: #a7a8a9;
-    h1{
-        color:azure;
-        font-size: 28px;
-        margin: 20px;
-    }
-   
-
-.readmore{
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    margin-left: 1.5rem;
-    border-radius: 1rem;
-    background-color: $darkest-background;
-    color: $global-font-color;
-    border: 1px solid ;
-    margin-bottom: 1rem;;
-}
-}
-.img{
-    display: flex;
-    justify-content: center;
-
-    img{
-        width: auto;
-        height: auto;
-        margin: 2rem;
-         
-}
 }
 .article{  
+    .txt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color:#1B1B1B ;
+        color: #a7a8a9;
+        margin-bottom: 3rem;
+        h1{
+            color:azure;
+            font-size: 28px;
+            margin: 20px;
+        }
+       
+    
+    .readmore{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        margin-left: 1.5rem;
+        border-radius: 1rem;
+        background-color: $darkest-background;
+        color: $global-font-color;
+        border: 1px solid ;
+        margin-bottom: 1rem;;
+    }
+    }
+    .img{
+        display: flex;
+        justify-content: center;
+    
+        img{
+            width: 100%;
+            height: auto;
+            
+             
+    }
+    }
     
     .subtitle{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr) ;
-        grid-template-rows: repeat(2, 1fr) ;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-        padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) ;
+            grid-template-rows: repeat(2, 1fr) ;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            padding: 20px;
             
     .date { 
-        display: flex;
+            display: flex;
             gap: 5px;
             }
     .member {
@@ -100,13 +103,13 @@ h3{
         }
     }
     .description{
-        padding: 20px;
+            padding: 20px;
     }
     .button{
-        background-color: #222222;
-        color: #a7a8a9;
-        border: 1px solid  #a7a8a9 ;
-        border-radius: 20px;
+            background-color: #222222;
+            color: #a7a8a9;
+            border: 1px solid  #a7a8a9 ;
+            border-radius: 20px;
 
         p{
             margin-top: 5px;
@@ -232,17 +235,17 @@ li{
         display: flex;
     .article{
         width: 100%;
-        margin: 5rem;
+        margin: 3rem;
 
         
     }
     .section{
+        padding: 0;
+        margin:2rem;
 
-        margin:4rem;
         h3{
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
-        width: 50%;
         .Instagram_img{
             width: 90%;
             display: grid;
@@ -250,14 +253,20 @@ li{
             grid-template-rows: 1fr 1fr 1fr;
             grid-gap: 0px;
 
-            padding-left: 1rem;
+            
+        }
+        .tags_ul{
+            width: 100%;
+
+            li{
+                margin: 0.5rem;
+            }
+        }
     }
-    .tags_ul{
-        margin-left: 1rem;
     }
     }
 }
-    }}
+    
 
     @media only screen and (min-width: 1340px){
 
@@ -265,28 +274,39 @@ li{
             .container{
              display: flex;
              padding: 10rem;
-         .article{
+         
+             .article{
              width: 100%;
-             
-         }
-         .section{
-             h3{
-                 margin-top: 3rem;
+
+             .txt{
+                position: relative;
+                top: -5rem;
+                
              }
-             width: 50%;
-             .Instagram_img{
-                 width: 90%;
-                 display: grid;
-                 grid-template-columns: 1fr 1fr 1fr ;
-                 grid-template-rows: 1fr 1fr;
-                 grid-gap: 0px;
-     
-                 padding-left: 1rem;
-         }
-         .tags_ul{
-             margin-left: 1rem;
-         }
-         }
-     }
-         }
+             .img{
+                position: relative;
+                left: -5rem;
+             }
+            }
+            .section{
+                width: 50%;
+                h3{
+                    margin-top: 3rem;
+                    margin-left: 2rem;
+                }
+                 
+                .Instagram_img{
+                    width: 90%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr ;
+                    grid-template-rows: 1fr 1fr;
+                    grid-gap: 2rem;
+                    padding-left: 1rem;
+                }
+                .tags_ul{
+                    margin-left: 1rem;
+                }
+            }
+        }
     }
+}

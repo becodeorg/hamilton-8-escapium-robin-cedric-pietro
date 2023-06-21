@@ -643,20 +643,23 @@ main.blogs_pages .pageiid soustitre {
   display: flex;
   gap: 0.8rem;
 }
-main.blogs_pages .txt {
+main.blogs_pages .articles {
+  margin: 2rem;
+}
+main.blogs_pages .article .txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: #1B1B1B;
-  margin: 2rem;
   color: #a7a8a9;
+  margin-bottom: 3rem;
 }
-main.blogs_pages .txt h1 {
+main.blogs_pages .article .txt h1 {
   color: azure;
   font-size: 28px;
   margin: 20px;
 }
-main.blogs_pages .txt .readmore {
+main.blogs_pages .article .txt .readmore {
   width: 40%;
   display: flex;
   justify-content: center;
@@ -667,14 +670,13 @@ main.blogs_pages .txt .readmore {
   border: 1px solid;
   margin-bottom: 1rem;
 }
-main.blogs_pages .img {
+main.blogs_pages .article .img {
   display: flex;
   justify-content: center;
 }
-main.blogs_pages .img img {
-  width: auto;
+main.blogs_pages .article .img img {
+  width: 100%;
   height: auto;
-  margin: 2rem;
 }
 main.blogs_pages .article .subtitle {
   display: grid;
@@ -804,14 +806,14 @@ main.blogs_pages .section .tags_ul .tags_button {
   }
   main.blogs_pages .container .article {
     width: 100%;
-    margin: 5rem;
+    margin: 3rem;
   }
   main.blogs_pages .container .section {
-    margin: 4rem;
-    width: 50%;
+    padding: 0;
+    margin: 2rem;
   }
   main.blogs_pages .container .section h3 {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   main.blogs_pages .container .section .Instagram_img {
     width: 90%;
@@ -819,10 +821,12 @@ main.blogs_pages .section .tags_ul .tags_button {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 0px;
-    padding-left: 1rem;
   }
   main.blogs_pages .container .section .tags_ul {
-    margin-left: 1rem;
+    width: 100%;
+  }
+  main.blogs_pages .container .section .tags_ul li {
+    margin: 0.5rem;
   }
 }
 @media only screen and (min-width: 1340px) {
@@ -833,18 +837,27 @@ main.blogs_pages .section .tags_ul .tags_button {
   main.blogs_pages .container .article {
     width: 100%;
   }
+  main.blogs_pages .container .article .txt {
+    position: relative;
+    top: -5rem;
+  }
+  main.blogs_pages .container .article .img {
+    position: relative;
+    left: -5rem;
+  }
   main.blogs_pages .container .section {
     width: 50%;
   }
   main.blogs_pages .container .section h3 {
     margin-top: 3rem;
+    margin-left: 2rem;
   }
   main.blogs_pages .container .section .Instagram_img {
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 0px;
+    grid-gap: 2rem;
     padding-left: 1rem;
   }
   main.blogs_pages .container .section .tags_ul {
