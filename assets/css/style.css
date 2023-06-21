@@ -861,6 +861,11 @@ main.blogs_pages .section .tags_ul .tags_button {
     padding-left: 1rem;
   }
   main.blogs_pages .container .section .tags_ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     margin-left: 1rem;
   }
 }
