@@ -607,11 +607,21 @@ main.home > section:nth-child(3) article p {
   text-align: center;
 }
 
+main.about .banniere {
+  width: 100%;
+}
+main.about .banniere img {
+  width: 100%;
+  height: 100%;
+}
 main.about .howToPlay {
   background-color: #1b1b1b;
   text-align: center;
   color: #717171;
   padding: 5%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
 }
 main.about .howToPlay__title {
   padding-top: 15%;
@@ -620,6 +630,9 @@ main.about .howToPlay__title {
 }
 main.about .howToPlay__whoShouldPlay {
   margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main.about .howToPlay__whoShouldPlay__fa-sharp fa-regular fa-user {
   border: 1px #717171 solid;
@@ -631,6 +644,9 @@ main.about .howToPlay__whoShouldPlay__title {
 }
 main.about .howToPlay__forTeamBuilding {
   margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main.about .howToPlay__forTeamBuilding__title {
   color: #fefefe;
@@ -638,18 +654,36 @@ main.about .howToPlay__forTeamBuilding__title {
 }
 main.about .howToPlay__forSpecialEvents {
   margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main.about .howToPlay__forSpecialEvents__title {
   color: #fefefe;
   padding: 5%;
 }
 main.about .howToPlay video {
-  padding: 7% 0 0 7%;
+  padding: 10% 0 5% 0;
 }
 main.about .certificates {
   text-align: center;
   background-color: #1b1b1b;
   padding-bottom: 5%;
+}
+main.about .certificates span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: flex-start; */
+  gap: 1em;
+  color: #717171;
+}
+main.about .certificates span::before {
+  content: "";
+  width: 2em;
+  height: 2px;
+  border-radius: 5px;
+  background: #717171;
 }
 main.about .certificates__title {
   padding-bottom: 10%;
@@ -663,22 +697,40 @@ main.about .ourTeam {
   background-color: #222222;
   padding: 5% 0 5% 0;
 }
-main.about .ourTeam__article {
+main.about .ourTeam__title {
+  color: #fefefe;
+  padding-bottom: 10%;
+}
+main.about .ourTeam .containerTeam {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+main.about .ourTeam .containerTeam .ourTeam__article {
   text-align: center;
   background-color: #222222;
+  width: 90%;
 }
-main.about .ourTeam__article__members {
-  padding-top: 10%;
+main.about .ourTeam .containerTeam .ourTeam__article__members {
+  width: 100%;
+  opacity: 0.3;
 }
-main.about .ourTeam__article__titleTwo {
+main.about .ourTeam .containerTeam .ourTeam__article__members:hover {
+  border: red 4px solid;
+  opacity: 1;
+}
+main.about .ourTeam .containerTeam .ourTeam__article__titleTwo {
   color: #fefefe;
   text-align: center;
   padding-top: 5%;
+  padding-bottom: 1%;
 }
-main.about .ourTeam__article__titleThree {
+main.about .ourTeam .containerTeam .ourTeam__article__titleThree {
   color: #717171;
   text-align: center;
-  padding-bottom: 5%;
+  padding-bottom: 10%;
   font-size: 10px;
 }
 main.about .whatPeopleSay {
@@ -712,180 +764,81 @@ main.about .whatPeopleSay__figName {
   color: #717171;
   padding: 3%;
 }
-main.about .blogs {
-  background-color: #fefefe;
-  font-size: 10px;
-}
-main.about .blogs__title {
-  color: black;
-  text-align: center;
-}
-main.about .blogs__para {
-  color: #717171;
-  text-align: center;
-}
-main.about .blogs__faq__question {
-  display: flex;
-  justify-content: flex-start;
-}
-
-main.blogs {
-  background-color: black;
-}
-main.blogs .line {
-  border-bottom: 1px solid black; /* Ajoute une ligne de soulignement */
-}
-main.blogs .pageiid {
+main.about .faq__section {
   width: 100%;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(/assets/resources/images/gallery/slide-1.jpg);
-  background-size: 1920px; /* Ajustez les valeurs de largeur et hauteur selon vos besoins */
-  background-repeat: no-repeat;
-  background-position: center;
+  margin: 0 auto;
+  padding: 5%;
 }
-main.blogs .pageiid .titre {
-  color: azure;
-  padding: 10px;
+main.about .faq__section__title {
+  text-align: center;
 }
-main.blogs .pageiid soustitre {
-  display: flex;
-  gap: 10px;
+main.about .faq__section__para {
+  text-align: center;
+  padding-bottom: 5%;
 }
-main.blogs article {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: #1B1B1B;
-  margin: 2rem;
-  color: #a7a8a9;
+main.about .faq__section__item__question {
+  padding-bottom: 5%;
+  cursor: pointer;
 }
-main.blogs article h1 {
-  color: azure;
-  font-size: 28px;
-  margin: 20px;
-}
-main.blogs article img {
-  width: 90%;
-  height: auto;
-  margin: 2rem;
-}
-main.blogs .promotions .promotions_subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 20px;
-}
-main.blogs .promotions .promotions_subtitle .promotions_date {
-  grid-area: 1/1/2/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .promotions .promotions_subtitle .promotions_member {
-  grid-area: 1/2/2/3;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .promotions .promotions_subtitle .promotions_comments {
-  grid-area: 2/1/3/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .promotions .promotions_description {
-  padding: 20px;
-}
-main.blogs .promotions .promotions_button {
-  background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
+main.about .faq__section__item__question:after {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
   border-radius: 20px;
+  margin-left: 5px;
 }
-main.blogs .promotions .promotions_button p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-main.blogs .teambuilding .teambuilding_subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 20px;
-}
-main.blogs .teambuilding .teambuilding_subtitle .teambuilding_date {
-  grid-area: 1/1/2/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .teambuilding .teambuilding_subtitle .teambuilding_member {
-  grid-area: 1/2/2/3;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .teambuilding .teambuilding_subtitle .teambuilding_comments {
-  grid-area: 2/1/3/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .teambuilding .teambuilding_description {
-  padding: 20px;
-}
-main.blogs .teambuilding .teambuilding_button {
-  background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
+main.about .faq__section__item__question.active:after {
+  content: "➖";
   border-radius: 20px;
+  /* Unicode character for "minus" sign (-) */
 }
-main.blogs .teambuilding .teambuilding_button p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+main.about .faq__section__item__answer {
+  display: none;
+  color: #717171;
+  padding-bottom: 5%;
 }
-main.blogs .corporateevents .corporateevents_subtitle {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  padding: 20px;
+main.about .faq__section__item__answer p {
+  margin-top: 0;
 }
-main.blogs .corporateevents .corporateevents_subtitle .corporateevents_date {
-  grid-area: 1/1/2/2;
-  display: flex;
-  gap: 5px;
+main.about .faq__section__item__question.active__answer {
+  display: block;
 }
-main.blogs .corporateevents .corporateevents_subtitle .corporateevents_member {
-  grid-area: 1/2/2/3;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .corporateevents .corporateevents_subtitle .corporateevents_comments {
-  grid-area: 2/1/3/2;
-  display: flex;
-  gap: 5px;
-}
-main.blogs .corporateevents .corporateevents_description {
-  padding: 20px;
-}
-main.blogs .corporateevents .corporateevents_button {
-  background-color: #222222;
-  color: #a7a8a9;
-  border: 1px solid #a7a8a9;
-  border-radius: 20px;
-}
-main.blogs .corporateevents .corporateevents_button p {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
+@media screen and (min-width: 415px) {
+  main.about .howToPlay .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3%;
+  }
+  main.about .certificates__grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.5%;
+  }
+  main.about .certificates__grid__item img {
+    width: 100%;
+  }
+  main.about .certificates__grid__title {
+    font-size: 44px;
+  }
+  main.about .ourTeam {
+    width: 100%;
+  }
+  main.about .ourTeam .containerTeam {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5%;
+  }
+  main.about .ourTeam .containerTeam .ourTeam__article {
+    width: auto;
+    padding: 0;
+  }
+  main.about .ourTeam .containerTeam .ourTeam__article .ourTeam__members img {
+    width: 100%;
+  }
 }
 
 main.blogs {
