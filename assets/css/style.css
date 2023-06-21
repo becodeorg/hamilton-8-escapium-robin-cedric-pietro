@@ -744,302 +744,239 @@ main.home > section:nth-child(3) > section article p {
   color: #717171;
   text-align: center;
 }
-main.home > section:nth-child(4) {
+
+main.about .banniere {
+  width: 100%;
+}
+main.about .banniere img {
+  width: 100%;
+  height: 100%;
+}
+main.about .howToPlay {
+  background-color: #1b1b1b;
+  text-align: center;
+  color: #717171;
+  padding: 5%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+main.about .howToPlay__title {
+  padding-top: 15%;
+  color: #fefefe;
+  margin-top: 10%;
+}
+main.about .howToPlay__whoShouldPlay {
+  margin-top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2vh;
-  padding: 5vh 10%;
 }
-main.home > section:nth-child(4)::before {
-  background: hsla(0, 0%, 0%, 0.4);
+main.about .howToPlay__whoShouldPlay__fa-sharp fa-regular fa-user {
+  border: 1px #717171 solid;
+  border-radius: 20px;
 }
-main.home > section:nth-child(4) section {
-  width: 100%;
+main.about .howToPlay__whoShouldPlay__title {
+  color: #fefefe;
+  padding: 5%;
+}
+main.about .howToPlay__forTeamBuilding {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main.about .howToPlay__forTeamBuilding__title {
+  color: #fefefe;
+  padding: 5%;
+}
+main.about .howToPlay__forSpecialEvents {
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main.about .howToPlay__forSpecialEvents__title {
+  color: #fefefe;
+  padding: 5%;
+}
+main.about .howToPlay video {
+  padding: 10% 0 5% 0;
+}
+main.about .certificates {
+  text-align: center;
+  background-color: #1b1b1b;
+  padding-bottom: 5%;
+}
+main.about .certificates span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 5vw;
-}
-main.home > section:nth-child(4) section article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5vh;
-}
-main.home > section:nth-child(4) section article:first-child {
-  display: none;
-}
-main.home > section:nth-child(4) p {
-  text-align: center;
-  margin: 3vh 0;
-}
-main.home > section:nth-child(4) cite {
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #717171;
-}
-main.home > section:nth-child(4) div.navigate-btn {
-  display: none;
-}
-main.home > section:nth-child(5) {
-  background: #1b1b1b;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5vh;
-  padding-top: 3vh;
-}
-main.home > section:nth-child(5) h2,
-main.home > section:nth-child(5) p,
-main.home > section:nth-child(5) cite,
-main.home > section:nth-child(5) span {
-  color: #fefefe;
-}
-main.home > section:nth-child(5) > section {
-  width: 100%;
-}
-main.home > section:nth-child(5) > section figure {
-  width: 100%;
-  position: relative;
-  z-index: 300;
-}
-main.home > section:nth-child(5) > section figure > img {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-main.home > section:nth-child(5) > section figure cite {
-  width: 100%;
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   gap: 1em;
-  font-weight: 700;
-  font-style: normal;
-}
-main.home > section:nth-child(5) > section figure cite img {
-  border-radius: 50px;
-  border: 2px solid #fefefe;
-}
-main.home > section:nth-child(5) > section article {
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
-  box-shadow: 0px -5vh 5em #222222;
-  position: relative;
-  z-index: 350;
-  padding: 5vh 2em;
-}
-main.home > section:nth-child(5) > section article span {
   color: #717171;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  letter-spacing: 1.5px;
-  margin-bottom: 2vh;
 }
-main.home > section:nth-child(5) > section article span::after {
+main.about .certificates span::before {
   content: "";
-  width: 6%;
-  height: 3px;
+  width: 2em;
+  height: 2px;
+  border-radius: 5px;
   background: #717171;
 }
-main.home > section:nth-child(5) > section article p {
-  color: #717171;
+main.about .certificates__title {
+  padding-bottom: 10%;
+  color: #fefefe;
 }
-main.home > section:nth-child(5) > section:last-child {
-  padding: 5vh 2em;
-  background-image: url("../resources/images/gallery/room-7.jpg");
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  gap: 1rem;
-  background-blend-mode: multiply;
-  box-shadow: inset 60vw 0px 30vw #222222;
+main.about .certificates__grid__item {
+  margin-bottom: 5%;
 }
-main.home > section:nth-child(5) > section:last-child ul {
+main.about .ourTeam {
+  text-align: center;
+  background-color: #222222;
+  padding: 5% 0 5% 0;
+}
+main.about .ourTeam__title {
+  color: #fefefe;
+  padding-bottom: 10%;
+}
+main.about .ourTeam .containerTeam {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 3vh;
 }
-main.home > section:nth-child(5) > section:last-child ul li {
+main.about .ourTeam .containerTeam .ourTeam__article {
+  text-align: center;
+  background-color: #222222;
+  width: 90%;
+}
+main.about .ourTeam .containerTeam .ourTeam__article__members {
   width: 100%;
-  display: grid;
-  grid-template-columns: 0.45fr 1fr;
-  grid-template-rows: 1fr;
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #fefefe;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  opacity: 0.3;
 }
-main.home > section:nth-child(5) > section:last-child ul li i {
-  font-size: 2rem;
-  color: #f60b0e;
+main.about .ourTeam .containerTeam .ourTeam__article__members:hover {
+  border: red 4px solid;
+  opacity: 1;
+}
+main.about .ourTeam .containerTeam .ourTeam__article__titleTwo {
+  color: #fefefe;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 1%;
+}
+main.about .ourTeam .containerTeam .ourTeam__article__titleThree {
+  color: #717171;
+  text-align: center;
+  padding-bottom: 10%;
+  font-size: 10px;
+}
+main.about .whatPeopleSay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1b1b1b;
+  text-align: center;
+  padding-top: 10%;
+}
+main.about .whatPeopleSay__title {
+  color: #fefefe;
+  padding: 5% 0 5% 0;
+}
+main.about .whatPeopleSay__link {
+  color: red;
+  font-size: 10px;
+  text-decoration: underline;
+  padding-bottom: 10%;
+}
+main.about .whatPeopleSay__citation {
+  padding: 0 8% 8% 8%;
+  color: #717171;
+}
+main.about .whatPeopleSay__image {
+  width: 20%;
+  height: 20%;
+  padding: 2%;
+}
+main.about .whatPeopleSay__figName {
+  color: #717171;
+  padding: 3%;
+}
+main.about .faq__section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 5%;
+}
+main.about .faq__section__title {
   text-align: center;
 }
-main.home > section:nth-child(6) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3vh;
-  padding: 3vh 2em;
-  padding-bottom: 5vh;
-  background: #1b1b1b;
+main.about .faq__section__para {
+  text-align: center;
+  padding-bottom: 5%;
 }
-main.home > section:nth-child(6) h2 {
-  color: #fefefe;
-}
-main.home > section:nth-child(6) section {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-gap: 5px;
-}
-main.home > section:nth-child(6) section img {
-  width: 100%;
-}
-main.home > section:nth-child(6) a:last-child {
-  color: #fefefe;
-  padding: 1em 2em;
-  font-size: 1rem;
-  border-radius: 100px;
-  border: 2px solid #717171;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-main.home > section:nth-child(6) a:last-child i {
-  font-size: 1.2rem;
-}
-main.home > section:nth-child(7) {
-  background: #222222;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 5vh;
-}
-main.home > section:nth-child(7)::before {
-  display: none;
-}
-main.home > section:nth-child(7) section {
-  width: 100%;
-}
-main.home > section:nth-child(7) section:first-child {
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main.home > section:nth-child(7) section:first-child figure {
-  position: absolute;
-  z-index: 990;
-}
-main.home > section:nth-child(7) section:first-child iframe {
-  position: relative;
-  z-index: 980;
-  height: 100%;
-  filter: invert(85%) grayscale(100%);
-}
-main.home > section:nth-child(7) section:last-child {
-  padding: 3vh 2vw;
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-}
-main.home > section:nth-child(7) section:last-child::before {
-  content: "";
-  width: 30px;
-  height: 5px;
-  background: #717171;
-  border-radius: 10px;
-}
-main.home > section:nth-child(7) section h2 {
-  font-size: 1.5rem;
-  color: #fefefe;
-  margin-bottom: 5vh;
-}
-main.home > section:nth-child(7) section form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 5vh;
-}
-main.home > section:nth-child(7) section form input, main.home > section:nth-child(7) section form textarea {
-  width: 100%;
-  padding-bottom: 1em;
-  font-size: 0.9rem;
-  border-bottom: 2px solid #717171;
-  background: none;
-  color: #fefefe;
-  position: relative;
-  transition: all 0.5s ease;
-}
-main.home > section:nth-child(7) section form input::placeholder, main.home > section:nth-child(7) section form textarea::placeholder {
-  color: #717171;
-}
-main.home > section:nth-child(7) section form input:hover, main.home > section:nth-child(7) section form textarea:hover {
-  border-color: #fefefe;
-}
-main.home > section:nth-child(7) section form input:focus, main.home > section:nth-child(7) section form textarea:focus {
-  border-color: #f60b0e;
-}
-main.home > section:nth-child(7) section form textarea {
-  min-height: 10em;
-}
-main.home > section:nth-child(7) section form button {
-  background: transparent;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #fefefe;
-  padding: 0.8em 2.5em;
-  border: 2px solid #717171;
-  border-radius: 100px;
+main.about .faq__section__item__question {
+  padding-bottom: 5%;
   cursor: pointer;
-  transition: all 0.5s ease;
 }
-main.home > section:nth-child(7) section form button:hover {
-  border-color: #fefefe;
+main.about .faq__section__item__question:after {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  border-radius: 20px;
+  margin-left: 5px;
 }
-main.home > section:nth-child(8) {
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3vh;
-  padding: 3vh 2em;
+main.about .faq__section__item__question.active:after {
+  content: "➖";
+  border-radius: 20px;
+  /* Unicode character for "minus" sign (-) */
 }
-main.home > section:nth-child(8) p {
-  color: hsla(0, 0%, 0%, 0.3);
-  font-size: 1.2rem;
+main.about .faq__section__item__answer {
+  display: none;
+  color: #717171;
+  padding-bottom: 5%;
 }
-main.home > section:nth-child(8) a {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #fefefe;
-  padding: 1em 2em;
-  background: #f60b0e;
-  border-radius: 100px;
-  margin-top: 2vh;
+main.about .faq__section__item__answer p {
+  margin-top: 0;
+}
+main.about .faq__section__item__question.active__answer {
+  display: block;
+}
+@media screen and (min-width: 415px) {
+  main.about .howToPlay .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3%;
+  }
+  main.about .certificates__grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.5%;
+  }
+  main.about .certificates__grid__item img {
+    width: 100%;
+  }
+  main.about .certificates__grid__title {
+    font-size: 44px;
+  }
+  main.about .ourTeam {
+    width: 100%;
+  }
+  main.about .ourTeam .containerTeam {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5%;
+  }
+  main.about .ourTeam .containerTeam .ourTeam__article {
+    width: auto;
+    padding: 0;
+  }
+  main.about .ourTeam .containerTeam .ourTeam__article .ourTeam__members img {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
