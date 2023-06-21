@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="/assets/css/style.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7b1b14c1ce.js" crossorigin="anonymous" defer></script>
-        <script defer>
+        <script>
 			$(function() {
-
+                $("#pageid").load("/src/_firstsection.html")
 				$("#header").load("/src/_header.html")
 				$("#footer").load("/src/_footer.html")
 			});
@@ -19,10 +19,7 @@
 		<header data-value="6" id="header"></header>
 		<main class="blogs_pages"> 
             
-            <section class="pageiid">
-                <h1 class="titre">Blog<i class="fa-solid fa-circle" style="color: #be2419;"></i></h1>
-                <soustitre><h2 style="color: #fefefe";>Escapium</h2><i class="fa-solid fa-greater-than" style="color: #a3a3a3;"></i><h2 style="color:#a3a3a3";>Blog</h2></soustitre>      
-            </section>
+            <section data-title="Blog" data-sub1="Escapium" data-sub2="blog" id="pageid" class="pageiid"></section>
 
             <section class="container">
                 <section class="articles">
