@@ -3,8 +3,6 @@ let articles = document.querySelectorAll("article")
 let spans = document.getElementById("span").querySelectorAll("span")
 let figures = document.getElementById("figure").querySelectorAll("figure")
 
-console.log(figures)
-
 for (let i = 0; i < spans.length; i++) {
 	spans[i].addEventListener('click', () => {
 		for (let j = 0; j < spans.length; j++) {

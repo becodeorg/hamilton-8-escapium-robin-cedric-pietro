@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/assets/css/style.css" rel="stylesheet">
+		<title>Escapium</title>
+	</head>
+	<body>
+		<header data-value="4" id="header"></header>
+		<main class="rooms">
+			<section data-title="rooms" data-sub1="Escapium" data-sub2="rooms" id="pageid" class="pageiid"></section>
+			
+			<section>
+				<section>
+					<ul>
+						<li><a id="all" href="?key=all">All</a></li>
+						<li><a id="easy" href="?key=easy">Easy</a></li>
+						<li><a id="normal" href="?key=normal">Normal</a></li>
+						<li><a id="hard" href="?key=hard">Hard</a></li>
+					</ul>
+				</section>
+				
+				<section>
+					<section id="rooms-containers"></section>
+					
+					<section>
+						<ul>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>...</li>
+							<li>10</li>
+						</ul>
+					</section>
+				</section>
+			</section>
+		</main>
+		<footer id="footer"></footer>
+		<script>
+			$(function() {
+				$("#pageid").load("/src/_firstsection.html")
+				$("#header").load("/src/_header.html")
+				$("#footer").load("/src/_footer.html")
+				$("#howitwork").load("src/_howitwork.html")
+			})
+		</script>
+		<script src="https://kit.fontawesome.com/513e9627f7.js" crossorigin="anonymous"></script>
+		<script src="/assets/js/rooms.js"></script>
+	</body>
+</html>

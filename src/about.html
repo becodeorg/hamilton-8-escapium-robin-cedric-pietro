@@ -9,9 +9,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header id="header">
-
-    </header>
+    <header data-value="2" id="header"></header>
 
     <main class="about">
         <section data-title="about" data-sub1="Home" data-sub2="About" id="pageid" class="pageiid">
@@ -132,8 +130,8 @@
     </footer>
     <script>
     $(function() {
-        $("difficulty").load("src/_difficulty.html")
         $("#header").load("_header.html")
+        $("#pageid").load("/src/_firstsection.html")
         $("#footer").load("_footer.html")
     });
     </script>

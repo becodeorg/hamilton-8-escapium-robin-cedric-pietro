@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="/assets/css/style.css" rel="stylesheet">
+		<title>Escapium</title>
+	</head>
+	<body>
+		<header data-value="4" id="header"></header>
+		<main class="rooms">
+			<section data-img="true" id="figure"></section>
+			
+		</main>
+		<footer id="footer"></footer>
+		<script>
+			$(function() {
+				$("#header").load("/src/_header.html")
+				$("#footer").load("/src/_footer.html")
+				$("#figure").load("/src/_figure.html")
+			})
+		</script>
+		<script src="https://kit.fontawesome.com/513e9627f7.js" crossorigin="anonymous"></script>
+		<script src="/assets/js/room.js"></script>
+	</body>
+</html>

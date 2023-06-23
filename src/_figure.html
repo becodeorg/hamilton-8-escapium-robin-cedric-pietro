@@ -1,0 +1,45 @@
+<article>
+	<div id="value">
+		<h2></h2>
+	</div>
+	<div id="span">
+		<span class="span-active"></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</article>
+<figure class="opacity-1"><img alt=""></figure>
+<figure><img alt=""></figure>
+<figure><img alt=""></figure>
+<figure><img alt=""></figure>
+<script src="/assets/js/homepage.js"></script>
+<script>
+	let arrImg = [
+		"/assets/resources/images/gallery/slide-1.jpg",
+		"/assets/resources/images/gallery/slide-2.jpg",
+		"/assets/resources/images/gallery/slide-3.jpg",
+		"/assets/resources/images/gallery/slide-4.jpg"
+	]
+	let figure = document.getElementById("figure")
+	let figs = figure.querySelectorAll("figure")
+	let value = document.getElementById("value")
+	
+	let h2 = figure.getAttribute("data-title")
+	value.children[0].textContent = h2
+	
+	if (figure.getAttribute("data-a") != undefined) {
+		let a = figure.getAttribute("data-a")
+		
+		let aEle = document.createElement("a")
+		aEle.setAttribute("href", "#")
+		aEle.textContent = a
+		value.append(aEle)
+	}
+	
+	if (figure.getAttribute("data-img") == undefined) {
+		for (let i = 0; i < figs.length; i++) {
+			figs[i].children[0].setAttribute("src", arrImg[i])
+		}
+	}
+</script>
