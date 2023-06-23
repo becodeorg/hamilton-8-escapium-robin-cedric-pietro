@@ -1,10 +1,15 @@
 
-
-main.blogsingle{
+*{
     background-color: black;
+    width: 100%;
+}
+main.blogsingle{
+   
+    p{
+        color: $global-font-color;
+    }
 
-
-    .pageid{
+    .pageiid{
         width: 100%;
         height: 300px;
         display: flex;
