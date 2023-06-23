@@ -8,37 +8,19 @@
         <script src="https://kit.fontawesome.com/7b1b14c1ce.js" crossorigin="anonymous" defer></script>
         <script defer>
 			$(function() {
-
+                $("#pageid").load("/src/_firstsection.html")
 				$("#header").load("/src/_header.html")
 				$("#footer").load("/src/_footer.html")
 			});
 		</script>
     <title>blogsingle</title>
 </head>
+
 <body>
     <header data-value="6" id="header"></header>
-    <main class="blogsingle">
     
-     
-    <section class="pageid"><h1 class="titre">Kidnapped Game Now open<i class="fa-solid fa-circle" style="color: #be2419;"></i></h1>
-        <soustitre>
-            <div class="date">
-                <i class="fa-sharp fa-regular fa-calendar" style="color:  #a7a8a9;"></i>
-                <p>SEPTEMBER 4, 2018</p>
-            </div>
-
-            <div class="member">
-                <i class="fa-solid fa-user" style="color: #a7a8a9;"></i>
-                <p>ANDY BERNARD</p>
-            </div>
-
-            <div class="comments">
-                <i class="fa-solid fa-message" style="color:#a7a8a9;"></i>
-                <p>4 COMMENTS</p>
-            </div>
-        </soustitre>      
-    </section>
-
+    <main class="blogsingle">
+        <section data-title="Blog" data-sub1="Escapium" data-sub2="blog" id="pageid" class="pageiid"></section>
     <article>
         <img src="/assets/resources/images/gallery/room-9.jpg">
         <p>
@@ -97,11 +79,83 @@
         <button>Mechanisms</button>
         <button>Promo</button>
         <button>Puzzle</button>
-
-        <div class></div>
-
-
     </article>
+
+        <div class="etiquette">
+        
+                <img src="" alt="">
+                <h2>Andy Bernard</h2>
+                <button><i></i></button>
+            
+        </div>
+
+        <a href="#"><h3>PERFECT FOR TEAM BUILDING</h3></a>
+
+        <section class="comments">
+           <article class="post">
+            <div class="entete">
+                <i>avatar</i>
+                <h3>Betty Drapper</h3>
+            </div> 
+            <p>Vivamus rhoncus nibh nisi, sit amet faucibus ante viverra et. Ut
+                dolor velit, iaculis id dolor condimentum, convallis porta felis.
+            </p>
+            <button class="reply">REPLY</button>
+           </article> 
+
+           <article class="post">
+            <div class="entete">
+                <i>avatar</i>
+                <h3>admin</h3>
+            </div> sed id sapien eu tellus vestibulum yempor ut sit amet risus. Sed
+            dapibus blandit maximus. Nam convallis dapibus risus ut
+            efficitur. Curabitur interdum quam vitae ullamcorper
+            fermentum. Integer lacinia varius mi, at feugiat felis vulputate
+            at. Praesent sed laoreet diam, eget  pelletestque nibh.
+            <p>
+
+            </p>
+            <button class="reply">REPLY</button>
+           </article> 
+
+           <article class="post">
+            <div class="entete">
+                <i>avatar</i>
+                <h3>Andy Bernard</h3>
+            </div> 
+            <p>
+                Sed dapibus blandit maximus. Nam convallis dapibus risus ut
+                efficitur. Curabitur interdum quam vitae ullamcorper 
+                fermentum. Integer lacinia varius mi, at feugiat felis vulputate
+                at. Praesent sed laoreet diam, eget pellentesque nibh.
+            </p>
+            <button class="reply">REPLY</button>
+           </article> 
+
+           <article class="post">
+            <div class="entete">
+                <i>avatar</i>
+                <h3>Kelly Kapoor</h3>
+            </div> 
+            <p>
+                Pellentesque elementum sit amet risus sed finibus. Curabitur ut
+                scellerisque ipsum. Aenean sodales libero at libero ornare, eu
+                lacinia turpis elementum. Maecenas finibus, erat id accumsan 
+                elementum, est nisl mattis lectus, eu convallis ipsum velit eu
+                arcu.
+            </p>
+            <button class="reply">REPLY</button>
+           </article> 
+        </section>
+
+        <section class="leaveacomment">
+            <h2>Leave a Comment</h2>
+            <button type="submit" [disabled]="!form.form.valid">
+                Save
+            </button>
+
+        </section>
+
 
 
 

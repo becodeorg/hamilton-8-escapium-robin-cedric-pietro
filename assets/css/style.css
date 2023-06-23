@@ -1189,7 +1189,13 @@ main.home > section:nth-child(8) a {
     grid-template-rows: repeat(2, 1fr);
   }
 }
+main.about {
+  width: 100%;
+  min-height: 100vh;
+}
 main.about .howToPlay {
+  width: 100%;
+  min-height: 50vh;
   background-color: #1b1b1b;
   text-align: center;
   color: #717171;
@@ -1650,7 +1656,6 @@ main.room section#figure figure:nth-child(5), main.room section#figure span:nth-
 }
 main.room > section:nth-child(2) {
   padding: 5vh 2em;
-  box-shadow: 0px -5vh 20vh #1b1b1b;
   background: #1b1b1b;
   width: 100%;
   display: flex;
@@ -2280,6 +2285,9 @@ main.blogs_pages .section .tags_ul .tags_button:hover {
     grid-row-gap: 0px;
     margin-left: 1rem;
   }
+}
+main.blogsingle p {
+  color: #717171;
 }
 
 /*# sourceMappingURL=style.css.map */
