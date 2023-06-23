@@ -1909,5 +1909,75 @@ main.blogs_pages .section .tags_ul .tags_button:hover {
     margin-left: 1rem;
   }
 }
+.contact #contact {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.container .getInTouch {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.container .getInTouch__title {
+  color: white;
+  padding: 10px;
+}
+.container .getInTouch__para {
+  padding: 20px;
+  color: #717171;
+}
+.container .getInTouch__ul {
+  display: flex;
+  flex-direction: column;
+  color: #717171;
+  gap: 2em;
+  width: 100%;
+  padding: 10px;
+}
+.container .getInTouch__ul__mail__para {
+  color: white;
+}
+.container .getInTouch__ul i {
+  font-size: 30px;
+}
+.container .getInTouch__ul li {
+  display: flex;
+  color: #717171;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4em;
+}
+
+@media screen and (min-width: 415px) {
+  .contact .pageiid {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact #contact .container {
+    display: flex;
+    flex-direction: row;
+    padding: 15vh;
+  }
+  .contact #contact .container::before {
+    display: none;
+  }
+  .contact #contact .getInTouch {
+    width: unset;
+    height: unset;
+  }
+  .contact #contact .formu {
+    flex-direction: column;
+    width: 80vw;
+    padding-top: 2vh;
+  }
+  .contact #contact .formu button {
+    width: 100%;
+  }
+  .contact #contact .formu button:hover {
+    background-color: red;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
