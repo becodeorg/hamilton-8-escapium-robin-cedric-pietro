@@ -5,10 +5,13 @@
 // bases
 @import "bases/_fonts.scss", "bases/_resets.scss";
 
-// component
-@import "component/_header.scss", "component/_footer.scss";
-
 // layout
 @import "layout/_acceuil.scss","layout/_about.scss" ,"layout/_blogs_page.scss";
 
 @import "/assets/css/layout/blogsingle";
+
+@import "layout/_header.scss", "layout/_contact.scss", "layout/_figure.scss", "layout/_firstsection.scss", "layout/_footer.scss";
+
+// pages
+@import "pages/_acceuil.scss","pages/_about.scss", "pages/_rooms.scss", "pages/_blogs_page.scss";
+

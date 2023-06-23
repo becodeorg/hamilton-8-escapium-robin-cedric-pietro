@@ -1,9 +1,9 @@
-/* Error: Can't find stylesheet to import.
+/* Error: expected "{".
  *    ,
- * 14 | @import "/assets/css/layout/blogsingle";
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 10 | @import "layout/_acceuil.scss","layout/_about.scss" ,"layout/_blogs_page.scss";
+ *    |                                                                               ^
  *    '
- *   style.scss 14:9  root stylesheet */
+ *   style.scss 10:79  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 14 \2502  @import \"/assets/css/layout/blogsingle\";\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   style.scss 14:9  root stylesheet";
+  content: 'Error: expected "{".\a    \2577 \a 10 \2502  @import "layout/_acceuil.scss","layout/_about.scss" ,"layout/_blogs_page.scss";\d\a    \2502                                                                                ^\a    \2575 \a   style.scss 10:79  root stylesheet';
 }

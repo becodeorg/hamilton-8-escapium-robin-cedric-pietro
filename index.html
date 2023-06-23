@@ -11,24 +11,7 @@
 		<header data-value="1" id="header"></header>
 		<main class="home">
 			<!-- head section -->
-			<section id="figure">
-				<article>
-					<div>
-						<h2>Escape in 60mins?</h2>
-						<a href="#">view our rooms</a>
-					</div>
-					<div id="span">
-						<span class="span-active"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-				</article>
-				<figure class="opacity-1"><img src="assets/resources/images/gallery/slide-1.jpg" alt=""></figure>
-				<figure><img src="assets/resources/images/gallery/slide-2.jpg" alt=""></figure>
-				<figure><img src="assets/resources/images/gallery/slide-3.jpg" alt=""></figure>
-				<figure><img src="assets/resources/images/gallery/slide-4.jpg" alt=""></figure>
-			</section>
+			<section data-title="Escape in 60mins?" data-a="view rooms" id="figure"></section>
 			<!-- rooms section -->
 			<section>
 				<h2>Featured Rooms</h2>
@@ -318,7 +301,7 @@
 				</a>
 			</section>
 			<!-- contact section -->
-			<section>
+			<section id="contact">
 				<section>
 					<figure>
 						<img src="assets/resources/images/logo/gmap-logo.png" alt="logo">
@@ -345,15 +328,12 @@
 		<footer id="footer"></footer>
 		<script>
 			$(function() {
-				$("difficulty").load("src/_difficulty.html")
+				$("#figure").load("/src/_figure.html")
 				$("#header").load("/src/_header.html")
 				$("#footer").load("/src/_footer.html")
 				$("#howitwork").load("src/_howitwork.html")
-				$("#header").load("src/_header.html")
-				$("#footer").load("src/_footer.html")
 			})
 		</script>
 		<script src="https://kit.fontawesome.com/513e9627f7.js" crossorigin="anonymous"></script>
-		<script src="assets/js/homepage.js"></script>
 	</body>
 </html>
