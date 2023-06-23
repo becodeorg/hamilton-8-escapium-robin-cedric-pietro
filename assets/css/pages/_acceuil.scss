@@ -367,9 +367,15 @@ main.home {
 				align-items: center;
 				justify-content: center;
 				gap: 1rem;
+				transition: $transition-5;
 				
 				i {
 					font-size: 1.2rem;
+				}
+				
+				&:hover {
+					background: $red;
+					border-color: $red;
 				}
 			}
 		}
@@ -409,19 +415,26 @@ main.home {
 			&:nth-child(2) {
 				
 				& > section {
-					width: 75%;
+					width: 90%;
+					height: 45vw;
 					display: flex;
 					flex-direction: row-reverse;
 					align-items: center;
 					
 					figure {
-						width: 70%;
+						height: 90%;
+						
+						img {
+							height: 100%;
+							background-position: center;
+						}
 					}
 					
 					article {
 						width: 50%;
 						padding: 10vh 2vw;
 						box-shadow: 30vw 0 10vw $darkest-background;
+						height: 100%;
 					}
 					
 					&:nth-child(3) {

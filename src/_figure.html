@@ -15,6 +15,7 @@
 <figure><img alt=""></figure>
 <script src="/assets/js/homepage.js"></script>
 <script>
+	let i = 0
 	let arrImg = [
 		"/assets/resources/images/gallery/slide-1.jpg",
 		"/assets/resources/images/gallery/slide-2.jpg",
@@ -40,6 +41,43 @@
 	if (figure.getAttribute("data-img") == undefined) {
 		for (let i = 0; i < figs.length; i++) {
 			figs[i].children[0].setAttribute("src", arrImg[i])
+			/*
+			if (window.innerWidth >= 768px) {
+				i = setTimeout(imageDisplayed, 20000, i, "/assets" + arrImg[i])
+			}*/
 		}
+	} else {
+		let sectionContainers = document.getElementById("rooms-containers")
+		let xhttp = new XMLHttpRequest()
+		xhttp.onreadystatechange = Action
+		xhttp.open("GET", "/assets/resources/rooms.json")
+		xhttp.send()
+		
+		function Action() {
+			if (this.readyState == 4 && this.status == 200) {
+				let values = JSON.parse(this.response)
+				let param = (new URLSearchParams(window.location.search)).get('key')
+				let data
+				
+				for (let value of values) {
+					if (value.name == param) {
+						data = value
+					}
+				}
+				
+				for (let i = 0; i < figs.length; i++) {
+					figs[i].children[0].setAttribute("src", ("/assets" + data.photos[i]))
+					
+					/*if (window.innerWidth >= 768px) {
+						i = setTimeout(imageDisplayed, 20000, i, ("/assets" + data.photos[i]))
+					}*/
+				}
+			}
+		}
+	}
+	
+	function imageDisplayed(i, src) {
+		figs[i].children[0].setAttribute("src", src)
+		return i++
 	}
 </script>

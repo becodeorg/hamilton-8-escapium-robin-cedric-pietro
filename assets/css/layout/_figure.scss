@@ -7,6 +7,7 @@ section#figure {
 	gap: 1em;
 	position: relative;
 	background: $dark-background;
+	z-index: 100;
 	
 	figure {
 		width: 100%;
@@ -53,7 +54,7 @@ section#figure {
 			text-transform: uppercase;
 			
 			&:hover {
-				color: $white-background;
+				color: $red;
 			}
 		}
 		
