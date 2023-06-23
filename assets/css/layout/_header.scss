@@ -248,7 +248,7 @@ header {
 		padding-right: 3em;
 		
 		a, input {
-			font-size: .6vw;
+			font-size: 1vw;
 		}
 		
 		nav {
@@ -307,7 +307,7 @@ header {
 			a:first-child {
 				width: auto;
 				height: auto;
-				padding: 1em 2em;
+				padding: 1vw 2vw;
 				border-radius: 20px;
 				
 				&::after {

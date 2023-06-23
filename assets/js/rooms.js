@@ -1,6 +1,11 @@
 let sectionContainers = document.getElementById("rooms-containers")
 let xhttp = new XMLHttpRequest()
 const filter = (new URLSearchParams(window.location.search)).get('key')
+
+let all = document.getElementById("all")
+let easy = document.getElementById("easy")
+let normal = document.getElementById("normal")
+let hard = document.getElementById("hard")
 xhttp.onreadystatechange = Action
 xhttp.open("GET", "/assets/resources/rooms.json")
 xhttp.send()
@@ -12,22 +17,59 @@ function Action() {
 		
 		values.forEach(element => {
 			if (filter == "easy") {
+				if (!easy.classList.contains("filter-active")) {
+					easy.classList.add("filter-active")
+				}
 				
-				if (element.difficulty >= 0 && element.difficulty <= 3) {
+				disableActiveClass(all)
+				disableActiveClass(normal)
+				disableActiveClass(hard)
+				
+				if (element.difficulty >= 0 && element.difficulty <= 2) {
 					createAndAddNewRooms(index, element)
 				}
 			} else if (filter == "normal") {
-				if (element.difficulty == 3) {
+				if (!normal.classList.contains("filter-active")) {
+					normal.classList.add("filter-active")
+				}
+				
+				disableActiveClass(all)
+				disableActiveClass(easy)
+				disableActiveClass(hard)
+				
+				if (element.difficulty === 2) {
 					createAndAddNewRooms(index, element)
 				}
 			} else if (filter == "hard") {
-				if (element.difficulty >= 4) {
+				if (!hard.classList.contains("filter-active")) {
+					hard.classList.add("filter-active")
+				}
+				
+				disableActiveClass(all)
+				disableActiveClass(easy)
+				disableActiveClass(normal)
+				
+				if (element.difficulty >= 3 && element.difficulty <= 4) {
 					createAndAddNewRooms(index, element)
 				}
 			} else {
+				if (!all.classList.contains("filter-active")) {
+					all.classList.add("filter-active")
+				}
+				
+				disableActiveClass(easy)
+				disableActiveClass(normal)
+				disableActiveClass(hard)
+				
 				createAndAddNewRooms(index, element)
 			}
 		})
+	}
+}
+
+function disableActiveClass(element) {
+	if (element.classList.contains("filter-active")) {
+		element.classList.remove("filter-active")
 	}
 }
 
