@@ -41,7 +41,7 @@ main.rooms {
 							justify-content: center;
 							border: 2px solid $global-font-color;
 							
-							&:hover {
+							&:hover, &.filter-active {
 								background: $red;
 								border-color: $red;
 							}
