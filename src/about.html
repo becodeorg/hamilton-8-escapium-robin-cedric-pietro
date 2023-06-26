@@ -151,10 +151,12 @@
     </footer>
     <script>
     $(function() {
-        $("#header").load("_header.html")
-        $("#pageid").load("/src/_firstsection.html")
-        $("#footer").load("_footer.html")
-        $("#carousel-container").load("/src/_carousel.html")
+        $(function() {
+            $("#carousel-container").load("/hamilton-8-escapium-robin-cedric-pietro/src/_carousel.html")
+            $("#figure").load("/hamilton-8-escapium-robin-cedric-pietro/src/_firstsection.html")
+            $("#header").load("/hamilton-8-escapium-robin-cedric-pietro/src/_header.html")
+            $("#footer").load("/hamilton-8-escapium-robin-cedric-pietro/src/_footer.html")
+        })
     });
     </script>
     <script src="../assets/js/aboutFAQ.js"></script>
