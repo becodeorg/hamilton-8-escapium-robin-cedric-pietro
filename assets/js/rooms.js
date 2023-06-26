@@ -7,7 +7,7 @@ let easy = document.getElementById("easy")
 let normal = document.getElementById("normal")
 let hard = document.getElementById("hard")
 xhttp.onreadystatechange = Action
-xhttp.open("GET", "/assets/resources/rooms.json")
+xhttp.open("GET", "/hamilton-8-escapium-robin-cedric-pietro/assets/resources/rooms.json")
 xhttp.send()
 
 function Action() {
@@ -76,7 +76,7 @@ function disableActiveClass(element) {
 function createAndAddNewRooms(index, element) {
 	// create element section container
 	let section = document.createElement("a")
-	section.setAttribute("href", "/src/room.html?key=" + element.name)
+	section.setAttribute("href", "/hamilton-8-escapium-robin-cedric-pietro/src/room.html?key=" + element.name)
 	
 	// create element figure container of image
 	let figure = document.createElement("figure")

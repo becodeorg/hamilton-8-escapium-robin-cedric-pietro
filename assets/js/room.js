@@ -25,7 +25,7 @@ let after = document.getElementById("after")
 let sectionContainers = document.getElementById("rooms-containers")
 let xhttp = new XMLHttpRequest()
 xhttp.onreadystatechange = Action
-xhttp.open("GET", "/assets/resources/rooms.json")
+xhttp.open("GET", "/hamilton-8-escapium-robin-cedric-pietro/assets/resources/rooms.json")
 xhttp.send()
 
 /**
