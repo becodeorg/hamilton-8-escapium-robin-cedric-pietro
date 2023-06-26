@@ -1199,12 +1199,11 @@ main.about .howToPlay {
   display: flex;
 }
 main.about .howToPlay__title {
-  padding-top: 15%;
   color: #fefefe;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 main.about .howToPlay__whoShouldPlay {
-  margin-top: 20%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1218,7 +1217,7 @@ main.about .howToPlay__whoShouldPlay__title {
   padding: 5%;
 }
 main.about .howToPlay__forTeamBuilding {
-  margin-top: 20%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1228,7 +1227,7 @@ main.about .howToPlay__forTeamBuilding__title {
   padding: 5%;
 }
 main.about .howToPlay__forSpecialEvents {
-  margin-top: 20%;
+  margin-top: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1341,7 +1340,7 @@ main.about .whatPeopleSay__figName {
 }
 main.about .faq__section {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   padding: 5%;
 }
 main.about .faq__section__title {
@@ -1352,7 +1351,7 @@ main.about .faq__section__para {
   padding-bottom: 5%;
 }
 main.about .faq__section__item__question {
-  padding-bottom: 5%;
+  padding-bottom: 3%;
   cursor: pointer;
 }
 main.about .faq__section__item__question:after {
@@ -1380,7 +1379,11 @@ main.about .faq__section__item__answer p {
 main.about .faq__section__item__question.active__answer {
   display: block;
 }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 600px) {
+  main.about .pageiid {
+    display: flex;
+    flex-direction: column;
+  }
   main.about .howToPlay .container {
     display: flex;
     flex-direction: row;
@@ -1413,6 +1416,15 @@ main.about .faq__section__item__question.active__answer {
   }
   main.about .ourTeam .containerTeam .ourTeam__article .ourTeam__members img {
     width: 100%;
+  }
+  main.about .faq__section {
+    width: 100%;
+  }
+  main.about .faq__section__item__question {
+    width: 60%;
+  }
+  main.about .faq__section__item__anwser {
+    width: 60%;
   }
 }
 
@@ -2281,11 +2293,6 @@ main.blogs_pages .section .tags_ul .tags_button:hover {
     margin-left: 1rem;
   }
 }
-* {
-  background-color: black;
-  width: 100%;
-}
-
 main.blogsingle p {
   color: #717171;
 }
