@@ -1,0 +1,20 @@
+<h1 class="titre">
+	<i class="fa-solid fa-circle" style="color: #be2419;"></i>
+</h1>
+
+<soustitre>
+	<h2 style="color: #fefefe";></h2>
+	<i class="fa-solid fa-greater-than" style="color: #a3a3a3;"></i>
+	<h2 style="color:#a3a3a3";></h2>
+</soustitre> 
+
+<script>
+	let pageid = document.getElementById("pageid")
+	let h1 = document.querySelector(".titre")
+	let h2one = document.querySelector("soustitre").children[0]
+	let h2two = document.querySelector("soustitre").children[2]
+	
+	h1.textContent =  pageid.getAttribute("data-title")
+	h2one.textContent = pageid.getAttribute("data-sub1")
+	h2two.textContent = pageid.getAttribute("data-sub2")
+</script>

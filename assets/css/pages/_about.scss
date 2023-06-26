@@ -1,0 +1,324 @@
+main.about{
+    width: 100%;
+    min-height: 100vh;
+    
+    .howToPlay{
+        width: 100%;
+        min-height: 50vh;
+        background-color: #1b1b1b;
+        text-align: center;
+        color: #717171;
+        padding: 5%;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        &__title{
+            color: #fefefe;
+            margin-top: 5%;
+        }
+        &__whoShouldPlay{
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                &__fa-sharp fa-regular fa-user{
+                border: 1px #717171 solid;
+                border-radius: 20px;
+            } 
+            &__title{
+                color: #fefefe;
+                padding: 5%;
+            }
+        }
+        &__forTeamBuilding{
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__title{
+                color: #fefefe;
+                padding: 5%;
+            }
+        }
+        &__forSpecialEvents{
+            margin-top: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__title{
+                color: #fefefe;
+                padding: 5%;
+            }
+        }
+        video{
+            padding: 10% 0 5% 0;
+
+        }
+    }
+    .certificates{
+        text-align: center;
+        background-color: #1b1b1b;
+        padding-bottom: 5%;
+        span {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* justify-content: flex-start; */
+            gap: 1em;
+            color: #717171;
+            
+            &::before{
+                content: "";
+                width: 2em;
+                height: 2px;
+                border-radius: 5px;
+                background: #717171;
+            }
+        }
+        &__title{
+            padding-bottom: 10%;
+            color: #fefefe;
+        }
+        &__grid{
+            &__item{
+                margin-bottom: 5%;
+            }
+        }
+    }
+
+    .ourTeam{
+        text-align: center;
+        background-color: #222222;
+        padding: 5% 0 5% 0;
+        &__title{
+            color: #fefefe;
+            padding-bottom: 10%;
+        }
+        .containerTeam{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3vh;
+            .ourTeam__article{
+                text-align: center;
+                background-color: #222222;
+                width: 90%;
+                &__members{
+                    width: 100%;
+                    opacity: 0.3;
+                    &:hover{
+                        border: red 4px solid;
+                        opacity: 1;
+                    }
+                }
+                &__titleTwo{
+                    color: #fefefe;
+                    text-align: center;
+                    padding-top: 5%;
+                    padding-bottom: 1%;
+                }
+                &__titleThree{
+                    color: #717171;
+                    text-align: center;
+                    padding-bottom: 10%;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    #carousel-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1b1b1b;
+        text-align: center;
+        padding-top: 10%;
+        h2{
+            color: #fefefe;
+        }
+        a{
+            color: red;
+            font-size: 10px;
+            margin-bottom: 10%;
+        }
+        p{
+            color: #717171;
+        }
+        &::before, &::after {
+          background: #1b1b1b,
+        }
+       
+    }
+      .faq__section {
+        width: 100%;
+        min-height: 50%;
+        margin: 0 auto;
+        padding: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2vh;
+        padding: 10vh 0 5vh 0;
+        
+        &__title{
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3vh;
+        }
+        &__para{
+            text-align: center;
+            margin-bottom: 3vh;
+            color: hsla(0, 0%, 0%, 0.3);
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        &__item {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2rem;
+            
+          &__question {
+            padding-bottom: 3vh;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: $dark-background;
+            
+            div {
+                width: 4rem;
+                aspect-ratio: 1/1;
+                border-radius: 100px;
+                background: hsla(0, 0%, 0%, .02);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                
+               &::before, &::after {
+                   content: "";
+                    width: 40%;
+                    height: 2px;
+                    background: hsla(0, 0%, 0%, .2);
+                    position: absolute;
+                    transition: $transition-3;
+                }
+                
+                &::after {
+                    transform: rotate(90deg);
+                }
+                
+                &.clicked::after {
+                    width: 0;
+                }
+            }
+            
+            &:hover {
+                color: $red;
+            }
+          }
+          &__answer {
+            margin-left: 85px;
+            height: 0;
+            color: #717171;
+            transition: all .3s ease;
+            
+            p {
+                opacity: 0;
+                transition: all .3s ease;
+            }
+          }
+          
+          &__answer.height {
+              height: 50px;
+              
+              p {
+                  opacity: 1;
+              }
+          }
+        }
+      }
+      @media screen and (min-width: 600px) {
+        .pageiid{
+            display: flex;
+            flex-direction: column;
+        }
+        .howToPlay{
+            .container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 3%;
+            }
+        }
+        .certificates{
+            &__grid{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 3.5%;
+                &__item{
+                    img{
+                        width: 100%;  
+                    }
+                }
+                &__title{
+                    font-size: 44px;
+                }          
+            }
+        }
+        .ourTeam{
+            width: 100%;
+            .containerTeam{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3.5%;
+                .ourTeam__article{
+                    width: auto;
+                    padding: 0;
+                    .ourTeam__members{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        #carousel-container{
+            .navigate-btn
+                i{
+                    color: #fefefe;
+                }
+                .seperator{
+                    color: #777;
+                }
+        }
+        .faq__section{
+            width: 100%;
+            &__item{
+                &__question{
+                    width: 60%;
+                }
+                &__anwser{
+                    width: 60%;
+                }
+            }
+        }
+      }
+}
+
+@media screen and (min-width: 1200px) {
+    main.about .faq__section {
+        
+        &__item {
+            width: 60%;
+        }
+    }
+}

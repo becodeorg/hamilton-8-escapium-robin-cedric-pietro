@@ -1,0 +1,12 @@
+// import scss element
+// utils
+@import "utils/_variables.scss";
+
+// bases
+@import "bases/_fonts.scss", "bases/_resets.scss";
+
+// layout
+@import "layout/_header.scss", "layout/_contact.scss", "layout/_figure.scss", "layout/_firstsection.scss", "layout/_footer.scss", "layout/_carousel.scss";
+
+// pages
+@import "pages/_acceuil.scss","pages/_about.scss", "pages/_rooms.scss", "pages/_room.scss", "pages/_blogs_page.scss", "pages/_blogsingle.scss", "pages/_contact.scss";

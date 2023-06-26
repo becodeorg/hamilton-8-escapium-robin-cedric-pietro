@@ -1,0 +1,78 @@
+.contact{
+    #contact{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    .getInTouch{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        &__title {
+            color: white;
+            padding: 10px;
+        }
+        &__para {
+            padding: 20px;
+            color: #717171;
+        }
+        &__ul {
+            display: flex;
+            flex-direction: column;
+            color: #717171;
+            gap: 2em;
+            width: 100%;
+            padding: 10px;
+            &__mail__para{
+                color: white;
+            }
+            i{
+                font-size: 30px;
+            }
+            li {
+                display: flex;
+                color: #717171;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 4em;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .contact{
+        .pageiid{
+            display: flex;
+            flex-direction: column;
+        }
+        #contact{
+            .container{
+                    display: flex;
+                    flex-direction: row;
+                    padding: 15vh;
+                    &::before{
+                        display: none;
+                    }
+                }
+                .getInTouch{
+                    width:unset;
+                    height: unset;
+                }
+                .formu{
+                    flex-direction: column;
+                    width:80vw;
+                    padding-top: 2vh;
+                    button{
+                        width: 100%;
+                        &:hover{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }

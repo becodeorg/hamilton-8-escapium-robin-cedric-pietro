@@ -1,0 +1,81 @@
+<h2 class="title"></h2>
+<a id="subtitle" class="below-link" href="#"></a>
+<section id="carrousel">
+	<article>
+		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
+		<figure>
+			<img src="/assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
+		</figure>
+		<cite>aaron</cite>
+	</article>
+	
+	<article>
+		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
+		<figure>
+			<img src="/assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
+		</figure>
+		<cite>tiffany</cite>
+	</article>
+	
+	<article>
+		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
+		<figure>
+			<img src="/assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
+		</figure>
+		<cite>aaron</cite>
+	</article>
+	
+	<article>
+		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
+		<figure>
+			<img src="/assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
+		</figure>
+		<cite>tiffany</cite>
+	</article>
+</section>
+<div class="navigate-btn">
+	<i class="prev fa-solid fa-arrow-left-long"></i>
+	<span class="separator"></span>
+	<i class="next fa-solid fa-arrow-right-long"></i>
+</div>
+<script>
+	let carouselContainer = document.getElementById("carousel-container")
+	let carousel = document.getElementById("carrousel")
+	
+	let title = carouselContainer.getAttribute("data-title")
+	let subTitle = carouselContainer.getAttribute("data-subtitle")
+	
+	// text
+	let carouselTitle = document.querySelector(".title")
+	let a = document.getElementById("subtitle")
+	carouselTitle.textContent = title
+	
+	if (subTitle != undefined) {
+		a.textContent = subTitle
+		a.append(document.createElement("span"))
+		a.append(document.createElement("span"))
+	} else {
+		a.style.display = "none"
+	}
+	
+	// carousel
+	$(document).ready(function() {
+		$(".prev").on('click', function() {
+			let prevValue = parseInt(window.getComputedStyle(carousel).left)
+			let vw = Math.round(100 * prevValue / window.innerWidth)
+			
+			if (prevValue <= 11) {
+				carousel.style.left = vw + 32 + "vw"
+			}
+		})
+		
+		$(".next").on('click', function() {
+			let prevValue = parseInt(window.getComputedStyle(carousel).left)
+			let vw = Math.round(100 * prevValue / window.innerWidth)
+			
+			if (prevValue >= -15) {
+				carousel.style.left = vw - 32 + "vw"
+			}
+		})
+	})
+</script>

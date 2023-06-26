@@ -1,0 +1,83 @@
+<article>
+	<div id="value">
+		<h2></h2>
+	</div>
+	<div id="span">
+		<span class="span-active"></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</article>
+<figure class="opacity-1"><img alt=""></figure>
+<figure><img alt=""></figure>
+<figure><img alt=""></figure>
+<figure><img alt=""></figure>
+<script src="/assets/js/homepage.js"></script>
+<script>
+	let i = 0
+	let arrImg = [
+		"/assets/resources/images/gallery/slide-1.jpg",
+		"/assets/resources/images/gallery/slide-2.jpg",
+		"/assets/resources/images/gallery/slide-3.jpg",
+		"/assets/resources/images/gallery/slide-4.jpg"
+	]
+	let figure = document.getElementById("figure")
+	let figs = figure.querySelectorAll("figure")
+	let value = document.getElementById("value")
+	
+	let h2 = figure.getAttribute("data-title")
+	value.children[0].textContent = h2
+	
+	if (figure.getAttribute("data-a") != undefined) {
+		let a = figure.getAttribute("data-a")
+		
+		let aEle = document.createElement("a")
+		aEle.setAttribute("href", "/src/rooms.html")
+		aEle.textContent = a
+		value.append(aEle)
+	}
+	
+	if (figure.getAttribute("data-img") == undefined) {
+		for (let i = 0; i < figs.length; i++) {
+			figs[i].children[0].setAttribute("src", arrImg[i])
+			/*
+			if (window.innerWidth >= 768px) {
+				i = setTimeout(imageDisplayed, 20000, i, "/assets" + arrImg[i])
+			}*/
+		}
+	} else {
+		let sectionContainers = document.getElementById("rooms-containers")
+		let xhttp = new XMLHttpRequest()
+		xhttp.onreadystatechange = Action
+		xhttp.open("GET", "/assets/resources/rooms.json")
+		xhttp.send()
+		
+		function Action() {
+			if (this.readyState == 4 && this.status == 200) {
+				let values = JSON.parse(this.response)
+				let param = (new URLSearchParams(window.location.search)).get('key')
+				let data
+				
+				for (let value of values) {
+					if (value.name == param) {
+						data = value
+					}
+				}
+				
+				for (let i = 0; i < figs.length; i++) {
+					figs[i].children[0].setAttribute("src", ("/assets" + data.photos[i]))
+					
+					/*if (window.innerWidth >= 768px) {
+						i = setTimeout(imageDisplayed, 20000, i, ("/assets" + data.photos[i]))
+					}*/
+				}
+			}
+		}
+	}
+	
+	function imageDisplayed(i, src) {
+		figs[i].children[0].setAttribute("src", src)
+		return i++
+	}
+</script>
