@@ -75,17 +75,7 @@
                 </article>
             </div>
         </section>
-        <section class="whatPeopleSay">
-            <h2 class="whatPeopleSay__title">What People Say</h2>
-            <a class="whatPeopleSay__link below-link" href="#">
-                READ ALL TESTIMONIA
-                <span></span>
-                <span></span>
-            </a>
-            <cite class="whatPeopleSay__citation">This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles</cite>
-            <img class="whatPeopleSay__image" src="../assets/resources/images/avatars/comment-avatar-2.png" alt="Woman with glasses">
-            <figcaption class="whatPeopleSay__figName">TIFFANY</figcaption>
-        </section>
+        <section data-title="What People Say" data-subtitle="READ ALL TESTIMONIAL" id="carousel-container"></section>
         <section class="faq__section">
             <h2 class="faq__section__title">FAQs</h2>
             <p class="faq__section__para">Lorem ipsum dolor sit amet.</p>
@@ -161,13 +151,10 @@
     </footer>
     <script>
     $(function() {
-<<<<<<< HEAD:src/_about.html
-        $("#pageid").load("/src/_firstsection.html")
-=======
->>>>>>> 2d40fa7115eb176735306ae13c3c46d79c076b17:src/about.html
         $("#header").load("_header.html")
         $("#pageid").load("/src/_firstsection.html")
         $("#footer").load("_footer.html")
+        $("#carousel-container").load("/src/_carousel.html")
     });
     </script>
     <script src="../assets/js/aboutFAQ.js"></script>
