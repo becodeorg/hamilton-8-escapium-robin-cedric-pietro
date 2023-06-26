@@ -171,29 +171,7 @@
 				</section>
 			</section>
 			<!-- testimo section -->
-			<section>
-				<h2>Testimonials</h2>
-				<section>
-					<article>
-						<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
-						<figure>
-							<img src="assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
-						</figure>
-						<cite>aaron</cite>
-					</article>
-					
-					<article>
-						<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
-						<figure>
-							<img src="assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
-						</figure>
-						<cite>tiffany</cite>
-					</article>
-				</section>
-				<div class="navigate-btn">
-					<a href=""><img src="assets/resources/images/logo/right-arrow.png" alt="left arrow"></a>
-					<a href=""><img src="assets/resources/images/logo/right-arrow.png" alt="left arrow"></a>
-				</div>
+			<section data-title="Testimonials" id="carousel-container">
 			</section>
 			<!-- blog section -->
 			<section>
@@ -328,6 +306,7 @@
 		<footer id="footer"></footer>
 		<script>
 			$(function() {
+				$("#carousel-container").load("/src/_carousel.html")
 				$("#figure").load("/src/_figure.html")
 				$("#header").load("/src/_header.html")
 				$("#footer").load("/src/_footer.html")
