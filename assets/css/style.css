@@ -2926,6 +2926,7 @@ main.blogsingle .escape ul.button .tags_button:hover {
 @media only screen and (min-width: 1340px) {
   .blogsingle .container {
     display: flex;
+    flex-direction: row;
     padding: 10rem;
   }
   .blogsingle .container .article {
