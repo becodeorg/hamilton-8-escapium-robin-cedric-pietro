@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
 * {
   font-size: 14px;
@@ -30,7 +29,6 @@ h3 {
 input, button, textarea {
   border: none;
   outline: none;
-  cursor: pointer;
 }
 
 a {
@@ -50,6 +48,47 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   transition: all 0.5s ease;
+}
+body a.below-link {
+  color: #f60b0e;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  position: relative;
+}
+body a.below-link span {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #f60b0e;
+  transition: all 0.5s ease;
+}
+body a.below-link span:nth-child(1) {
+  width: 0%;
+  background: #fefefe;
+}
+body a.below-link span:nth-child(2) {
+  right: 0;
+  left: unset;
+}
+body a.below-link:hover {
+  color: #fefefe;
+}
+body a.below-link:hover span:nth-child(1) {
+  animation-name: slideRight;
+  animation-duration: 0.8s;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+body a.below-link:hover span:nth-child(2) {
+  animation-name: slideLeft;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 body div.round-icon-slashed {
   width: 6em;
@@ -107,6 +146,34 @@ body.overflow-hidden {
 @media screen and (min-width: 799px) {
   body::before {
     display: none;
+  }
+}
+@keyframes slideLeft {
+  0% {
+    width: 100%;
+  }
+  33% {
+    width: 70%;
+  }
+  66% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes slideRight {
+  0% {
+    width: 0%;
+  }
+  33% {
+    width: 100%;
+  }
+  66% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
   }
 }
 header {
@@ -269,7 +336,8 @@ header section:nth-child(2) a:first-child::after {
   font-weight: 400;
 }
 header section:nth-child(2) a:first-child:hover {
-  border-color: #fefefe;
+  border-color: hsla(0, 100%, 100%, 0.2);
+  background: hsla(0, 100%, 100%, 0.2);
 }
 header section:nth-child(2) a:first-child:active {
   border-color: #f60b0e;
@@ -287,6 +355,9 @@ header section:nth-child(2) button {
 }
 header section:nth-child(2) button i {
   font-size: 1.2em;
+}
+header section:nth-child(2) button:hover i {
+  color: #f60b0e;
 }
 header div#burger {
   width: 30px;
@@ -611,6 +682,9 @@ section#figure::before {
   section#figure article div:nth-child(1) {
     align-items: flex-start;
   }
+  section#figure article div:nth-child(1) a {
+    justify-content: flex-start;
+  }
   section#figure article div:nth-child(2) {
     display: flex;
   }
@@ -694,6 +768,9 @@ footer section article ul li, footer section article h2 li {
 footer section article ul li em, footer section article h2 li em {
   color: #fefefe;
 }
+footer section article ul li em:hover, footer section article h2 li em:hover {
+  color: #f60b0e;
+}
 footer section article span {
   display: flex;
   flex-direction: row;
@@ -740,15 +817,34 @@ footer section article:last-child ul li a {
   aspect-ratio: 1/1;
   background: hsla(0, 0%, 44%, 0.1);
   border-radius: 50px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+footer section article:last-child ul li a i {
+  position: relative;
+  z-index: 2000;
+}
+footer section article:last-child ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  border-radius: 100px;
+  background: #f60b0e;
+  transition: all 0.3s ease;
+  transition-delay: 0.05s;
+  z-index: 100;
 }
 footer section article:last-child ul li a:hover {
   background: #fefefe;
-  color: #1b1b1b;
+}
+footer section article:last-child ul li a:hover::after {
+  width: 100%;
+  height: 100%;
 }
 footer section:nth-child(2) {
   align-items: center;
@@ -893,26 +989,6 @@ main.home > section {
   width: 100%;
   min-height: 30vh;
 }
-main.home > section a.below-link {
-  color: #f60b0e;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2em;
-  transition: all 0.5s ease;
-}
-main.home > section a.below-link::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: #f60b0e;
-  transition: all 0.5s ease;
-}
-main.home > section a.below-link:hover {
-  color: #fefefe;
-}
-main.home > section a.below-link:hover::after {
-  background: #fefefe;
-}
 main.home > section::before {
   content: "";
   width: 30px;
@@ -1042,6 +1118,13 @@ main.home > section:nth-child(5) cite,
 main.home > section:nth-child(5) span {
   color: #fefefe;
 }
+main.home > section:nth-child(5) h2, main.home > section:nth-child(5) span {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+main.home > section:nth-child(5) h2:hover, main.home > section:nth-child(5) span:hover {
+  color: #f60b0e;
+}
 main.home > section:nth-child(5) > section {
   width: 100%;
 }
@@ -1074,25 +1157,29 @@ main.home > section:nth-child(5) > section figure cite img {
 main.home > section:nth-child(5) > section article {
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 1vh;
   box-shadow: 0px -5vh 5em #222222;
   position: relative;
   z-index: 350;
-  padding: 5vh 2em;
+  padding: 3vh 2em;
 }
 main.home > section:nth-child(5) > section article span {
-  color: #717171;
+  color: hsla(0, 100%, 100%, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
   letter-spacing: 1.5px;
   margin-bottom: 2vh;
+  position: relative;
 }
 main.home > section:nth-child(5) > section article span::after {
   content: "";
-  width: 6%;
+  width: 7%;
   height: 3px;
-  background: #717171;
+  border-radius: 100px;
+  background: hsla(0, 100%, 100%, 0.1);
+  position: relative;
+  left: -2em;
 }
 main.home > section:nth-child(5) > section article p {
   color: #717171;
@@ -1149,7 +1236,73 @@ main.home > section:nth-child(6) section {
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 5px;
 }
-main.home > section:nth-child(6) section img {
+main.home > section:nth-child(6) section figure {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main.home > section:nth-child(6) section figure img {
+  width: 100%;
+  position: relative;
+  z-index: 200;
+}
+main.home > section:nth-child(6) section figure span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  opacity: 0;
+  background: hsla(0, 0%, 0%, 0.2);
+  transition: all 0.3s ease;
+  z-index: 3000;
+}
+main.home > section:nth-child(6) section figure span p {
+  color: #fefefe;
+}
+main.home > section:nth-child(6) section figure span p i {
+  margin-right: 0.5em;
+}
+main.home > section:nth-child(6) section figure div {
+  position: absolute;
+  z-index: 3000;
+  background: #f60b0e;
+  transition: all 0.3s ease;
+}
+main.home > section:nth-child(6) section figure div.left {
+  width: 3px;
+  height: 0%;
+  bottom: 0;
+  left: 0;
+}
+main.home > section:nth-child(6) section figure div.top {
+  width: 0%;
+  height: 3px;
+  top: 0;
+  left: 0;
+}
+main.home > section:nth-child(6) section figure div.right {
+  width: 3px;
+  height: 0%;
+  top: 0;
+  right: 0;
+}
+main.home > section:nth-child(6) section figure div.bottom {
+  width: 0%;
+  height: 3px;
+  bottom: 0;
+  right: 0;
+}
+main.home > section:nth-child(6) section figure:hover span {
+  opacity: 1;
+}
+main.home > section:nth-child(6) section figure:hover div.left, main.home > section:nth-child(6) section figure:hover div.right {
+  height: 100%;
+}
+main.home > section:nth-child(6) section figure:hover div.top, main.home > section:nth-child(6) section figure:hover div.bottom {
   width: 100%;
 }
 main.home > section:nth-child(6) a:last-child {
@@ -1192,6 +1345,10 @@ main.home > section:nth-child(8) a {
   background: #f60b0e;
   border-radius: 100px;
   margin-top: 2vh;
+  transition: all 0.3s ease;
+}
+main.home > section:nth-child(8) a:hover {
+  background: #d6090c;
 }
 
 @media screen and (min-width: 768px) {
@@ -1384,8 +1541,7 @@ main.about .whatPeopleSay__title {
 main.about .whatPeopleSay__link {
   color: red;
   font-size: 10px;
-  text-decoration: underline;
-  padding-bottom: 10%;
+  margin-bottom: 10%;
 }
 main.about .whatPeopleSay__citation {
   padding: 0 8% 8% 8%;
@@ -1402,44 +1558,85 @@ main.about .whatPeopleSay__figName {
 }
 main.about .faq__section {
   width: 100%;
+  min-height: 50%;
   margin: 0 auto;
   padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
 }
 main.about .faq__section__title {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3vh;
 }
 main.about .faq__section__para {
   text-align: center;
-  padding-bottom: 5%;
+  margin-bottom: 3vh;
+  color: hsla(0, 0%, 0%, 0.3);
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+main.about .faq__section__item {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
 }
 main.about .faq__section__item__question {
-  padding-bottom: 5%;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #222222;
 }
-main.about .faq__section__item__question:after {
-  content: "➕";
-  /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #777;
-  float: right;
-  border-radius: 20px;
-  margin-left: 5px;
+main.about .faq__section__item__question div {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  border-radius: 100px;
+  background: hsla(0, 0%, 0%, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-main.about .faq__section__item__question.active:after {
-  content: "➖";
-  border-radius: 20px;
-  /* Unicode character for "minus" sign (-) */
+main.about .faq__section__item__question div::before, main.about .faq__section__item__question div::after {
+  content: "";
+  width: 40%;
+  height: 2px;
+  background: hsla(0, 0%, 0%, 0.2);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+main.about .faq__section__item__question div::after {
+  transform: rotate(90deg);
+}
+main.about .faq__section__item__question div.clicked::after {
+  width: 0;
+}
+main.about .faq__section__item__question:hover {
+  color: #f60b0e;
 }
 main.about .faq__section__item__answer {
-  display: none;
+  margin-left: 85px;
+  height: 0;
   color: #717171;
-  padding-bottom: 5%;
+  transition: all 0.3s ease;
 }
 main.about .faq__section__item__answer p {
-  margin-top: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
-main.about .faq__section__item__question.active__answer {
-  display: block;
+main.about .faq__section__item__answer.height {
+  height: 50px;
+}
+main.about .faq__section__item__answer.height p {
+  opacity: 1;
 }
 @media screen and (min-width: 415px) {
   main.about .howToPlay .container {
@@ -1477,6 +1674,11 @@ main.about .faq__section__item__question.active__answer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  main.about .faq__section__item {
+    width: 60%;
+  }
+}
 main.rooms {
   width: 100%;
   background: #222222;
