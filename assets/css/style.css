@@ -684,7 +684,7 @@ section#figure::before {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(/assets/resources/images/gallery/slide-1.jpg);
+  background-image: url(/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/slide-1.jpg);
   background-size: cover; /* Ajustez les valeurs de largeur et hauteur selon vos besoins */
   background-repeat: no-repeat;
   background-position: center;
@@ -704,7 +704,7 @@ footer {
   flex-direction: column;
   background-color: hsla(0, 0%, 0%, 0.9);
   background-size: cover;
-  background-image: url("../resources/images/gallery/room-7.jpg");
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-7.jpg");
   background-position: right;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
