@@ -767,6 +767,124 @@ footer section:nth-child(2) cite {
     flex-direction: row;
   }
 }
+section#carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+  padding: 15vh 10%;
+}
+section#carousel-container::before {
+  background: hsla(0, 0%, 0%, 0.4);
+}
+section#carousel-container h2 {
+  font-size: 3rem;
+  color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+section#carousel-container h2::before {
+  content: "";
+  width: 10%;
+  height: 3px;
+  background: #717171;
+  border-radius: 100px;
+}
+section#carousel-container section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 7vw;
+}
+section#carousel-container section article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+}
+section#carousel-container section article:first-child {
+  display: none;
+}
+section#carousel-container p {
+  text-align: center;
+  margin: 3vh 0;
+  color: hsla(0, 0%, 0%, 0.3);
+  font-weight: 600;
+}
+section#carousel-container cite {
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #717171;
+}
+section#carousel-container div.navigate-btn {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  section#carousel-container {
+    position: relative;
+  }
+  section#carousel-container::before, section#carousel-container::after {
+    content: "";
+    width: 15%;
+    height: 100%;
+    background: #fefefe;
+    position: absolute;
+    top: 0;
+    z-index: 355;
+    border-radius: 0;
+  }
+  section#carousel-container::before {
+    left: 0;
+  }
+  section#carousel-container::after {
+    right: 0;
+  }
+  section#carousel-container section {
+    min-width: 200%;
+    position: relative;
+    left: 450px;
+    transition: all 0.5s ease;
+  }
+  section#carousel-container section article {
+    width: 25vw;
+    display: flex;
+    opacity: 1;
+  }
+  section#carousel-container section article:first-child {
+    display: flex;
+  }
+  section#carousel-container div.navigate-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+  }
+  section#carousel-container div.navigate-btn i {
+    font-size: 2rem;
+    color: #1b1b1b;
+    cursor: pointer;
+  }
+  section#carousel-container div.navigate-btn i:hover {
+    color: #f60b0e;
+  }
+  section#carousel-container div.navigate-btn .separator {
+    width: 7vw;
+    height: 2px;
+    background: hsla(0, 0%, 0%, 0.1);
+    transform: rotate(120deg);
+  }
+}
 main.home {
   width: 100%;
 }
@@ -907,49 +1025,6 @@ main.home > section:nth-child(3) > section article {
 main.home > section:nth-child(3) > section article p {
   color: #717171;
   text-align: center;
-}
-main.home > section:nth-child(4) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2vh;
-  padding: 5vh 10%;
-}
-main.home > section:nth-child(4)::before {
-  background: hsla(0, 0%, 0%, 0.4);
-}
-main.home > section:nth-child(4) section {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 5vw;
-}
-main.home > section:nth-child(4) section article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5vh;
-}
-main.home > section:nth-child(4) section article:first-child {
-  display: none;
-}
-main.home > section:nth-child(4) p {
-  text-align: center;
-  margin: 3vh 0;
-}
-main.home > section:nth-child(4) cite {
-  font-style: normal;
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #717171;
-}
-main.home > section:nth-child(4) div.navigate-btn {
-  display: none;
 }
 main.home > section:nth-child(5) {
   background: #1b1b1b;
@@ -1153,27 +1228,6 @@ main.home > section:nth-child(8) a {
   }
   main.home > section:nth-child(3) section article h2 {
     text-align: center;
-  }
-  main.home > section:nth-child(4) section article:first-child {
-    display: flex;
-  }
-  main.home > section:nth-child(4) div.navigate-btn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 3vw;
-  }
-  main.home > section:nth-child(4) div.navigate-btn a {
-    color: #1b1b1b;
-    display: flex;
-    align-items: center;
-  }
-  main.home > section:nth-child(4) div.navigate-btn a:first-child {
-    transform: rotate(180deg);
-  }
-  main.home > section:nth-child(4) div.navigate-btn a img {
-    width: 3em;
   }
   main.home > section:nth-child(5) > section {
     display: grid;
