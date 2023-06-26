@@ -352,6 +352,7 @@ li{
         main.blogs_pages{
             .container{
              display: flex;
+             flex-direction: row;
              padding: 10rem;
          
              .article{
