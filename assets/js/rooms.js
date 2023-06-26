@@ -84,7 +84,7 @@ function createAndAddNewRooms(index, element) {
 	// create element image
 	let img = document.createElement("img")
 	// set attribute src of image
-	img.setAttribute("src", "/assets" + element.photos[0])
+	img.setAttribute("src", "/hamilton-8-escapium-robin-cedric-pietro/assets" + element.photos[0])
 	// set attribute alt
 	img.setAttribute("alt", "picture")
 	
