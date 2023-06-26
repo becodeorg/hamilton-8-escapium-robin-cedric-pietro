@@ -1174,7 +1174,7 @@ main.home > section:nth-child(5) > section article p {
 }
 main.home > section:nth-child(5) > section:last-child {
   padding: 5vh 2em;
-  background-image: url("../resources/images/gallery/room-7.jpg");
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-7.jpg");
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2216,14 +2216,14 @@ main.room > section:nth-child(4) section a div p i {
   color: #fefefe;
 }
 main.room > section:nth-child(4) section a:nth-child(1) {
-  background-image: url("/assets/resources/images/gallery/room-5.jpg");
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-5.jpg");
 }
 main.room > section:nth-child(4) section a:nth-child(2) {
-  background-image: url("/assets/resources/images/gallery/room-8.jpg");
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-8.jpg");
   display: none;
 }
 main.room > section:nth-child(4) section a:nth-child(3) {
-  background-image: url("/assets/resources/images/gallery/room-9.jpg");
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-9.jpg");
   display: none;
 }
 main.room > section:nth-child(4) section a:hover {
@@ -2451,19 +2451,19 @@ main.blogs_pages .section .recent_posts .k date::after, main.blogs_pages .sectio
   margin: 1rem;
 }
 main.blogs_pages .section .recent_posts .k:hover {
-  background-image: url(/assets/resources/images/gallery/room-3.jpg);
+  background-image: url(/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-3.jpg);
   padding: 1rem;
 }
 main.blogs_pages .section .recent_posts .p:hover {
-  background-image: url(/assets/resources/images/gallery/slide-2.jpg);
+  background-image: url(/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/slide-2.jpg);
   padding: 1rem;
 }
 main.blogs_pages .section .recent_posts .w:hover {
-  background-image: url(/assets/resources/images/gallery/gallery-3.jpg);
+  background-image: url(/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/gallery-3.jpg);
   padding: 1rem;
 }
 main.blogs_pages .section .recent_posts .b:hover {
-  background-image: url(/assets/resources/images/gallery/gallery-8.jpg);
+  background-image: url(/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/gallery-8.jpg);
   padding: 1rem;
 }
 main.blogs_pages .section .tags_ul {
@@ -2573,7 +2573,7 @@ main.blogsingle .pageiid {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(/assets/resources/images/gallery/slide-1.jpg);
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/slide-1.jpg");
   background-size: 1920px; /* Ajustez les valeurs de largeur et hauteur selon vos besoins */
   background-repeat: no-repeat;
   background-position: center;
@@ -2850,19 +2850,19 @@ main.blogsingle .escape ul.button .tags_button:hover {
   margin: 1rem;
 }
 .section .recent_posts .k:hover {
-  background-image: url(/assets/resources/images/gallery/room-3.jpg);
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/room-3.jpg");
   padding: 1rem;
 }
 .section .recent_posts .p:hover {
-  background-image: url(/assets/resources/images/gallery/slide-2.jpg);
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/slide-2.jpg");
   padding: 1rem;
 }
 .section .recent_posts .w:hover {
-  background-image: url(/assets/resources/images/gallery/gallery-3.jpg);
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/gallery-3.jpg");
   padding: 1rem;
 }
 .section .recent_posts .b:hover {
-  background-image: url(/assets/resources/images/gallery/gallery-8.jpg);
+  background-image: url("/hamilton-8-escapium-robin-cedric-pietro/assets/resources/images/gallery/gallery-8.jpg");
   padding: 1rem;
 }
 .section .tags_ul {
