@@ -326,6 +326,10 @@ header {
 				border-left: 2px solid hsla(0, 100%, 100%, 0.3);
 				margin-left: 2em;
 				text-transform: uppercase;
+				
+				&:hover {
+					color: $red;
+				}
 			}
 		}
 	

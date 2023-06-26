@@ -76,7 +76,7 @@ function disableActiveClass(element) {
 function createAndAddNewRooms(index, element) {
 	// create element section container
 	let section = document.createElement("a")
-	section.setAttribute("href", "/src/room.html?key=" + index)
+	section.setAttribute("href", "/src/room.html?key=" + element.name)
 	
 	// create element figure container of image
 	let figure = document.createElement("figure")
