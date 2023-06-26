@@ -1375,29 +1375,18 @@ main.about #carousel-container {
   background-color: #1b1b1b;
   text-align: center;
   padding-top: 10%;
-  /* &__title{
-      color: #fefefe;
-      padding: 5% 0 5% 0;
-  }
-  &__link{
-      color: red;
-      font-size: 10px;
-      text-decoration:underline;
-      padding-bottom: 10%;
-  }
-  &__citation{
-      padding: 0 8% 8% 8%;
-      color: #717171;
-  }
-  &__image{
-      width: 20%;
-      height: 20%;
-      padding: 2%;
-  }
-  &__figName{
-      color: #717171;
-      padding: 3%;
-  } */
+}
+main.about #carousel-container h2 {
+  color: #fefefe;
+}
+main.about #carousel-container a {
+  color: red;
+}
+main.about #carousel-container p {
+  color: #717171;
+}
+main.about #carousel-container::before, main.about #carousel-container::after {
+  background: #1b1b1b;
 }
 main.about .faq__section {
   width: 100%;
@@ -1477,6 +1466,12 @@ main.about .faq__section__item__question.active__answer {
   }
   main.about .ourTeam .containerTeam .ourTeam__article .ourTeam__members img {
     width: 100%;
+  }
+  main.about #carousel-container .navigate-btn i {
+    color: #fefefe;
+  }
+  main.about #carousel-container .seperator {
+    color: #777;
   }
   main.about .faq__section {
     width: 100%;

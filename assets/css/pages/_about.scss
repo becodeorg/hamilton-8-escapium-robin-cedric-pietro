@@ -135,29 +135,19 @@ main.about{
         background-color: #1b1b1b;
         text-align: center;
         padding-top: 10%;
-        /* &__title{
+        h2{
             color: #fefefe;
-            padding: 5% 0 5% 0;
         }
-        &__link{
+        a{
             color: red;
-            font-size: 10px;
-            text-decoration:underline;
-            padding-bottom: 10%;
         }
-        &__citation{
-            padding: 0 8% 8% 8%;
+        p{
             color: #717171;
         }
-        &__image{
-            width: 20%;
-            height: 20%;
-            padding: 2%;
+        &::before, &::after {
+          background: #1b1b1b,
         }
-        &__figName{
-            color: #717171;
-            padding: 3%;
-        } */
+       
     }
       .faq__section {
         width: 100%;
@@ -249,6 +239,15 @@ main.about{
                     }
                 }
             }
+        }
+        #carousel-container{
+            .navigate-btn
+                i{
+                    color: #fefefe;
+                }
+                .seperator{
+                    color: #777;
+                }
         }
         .faq__section{
             width: 100%;
