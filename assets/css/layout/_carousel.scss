@@ -7,7 +7,7 @@ section#carousel-container {
 	padding: 15vh 10%;
 	
 	&::before {
-		background: hsla(0, 0%, 0%, 0.4);
+		display: none;
 	}
 	
 	h2 {
@@ -37,14 +37,14 @@ section#carousel-container {
 		gap: 7vw;
 		
 		article {
-			display: flex;
+			display: none;
 			flex-direction: column; 
 			align-items: center;
 			justify-content: center;
 			gap: 5vh;
 			
 			&:first-child {
-				display: none;
+				display: flex;
 			}
 		}
 	}
@@ -74,6 +74,7 @@ section#carousel-container {
 		position: relative;
 		
 		&::before, &::after {
+			display: block;
 			content: "";
 			width: 15%;
 			height: 100%;

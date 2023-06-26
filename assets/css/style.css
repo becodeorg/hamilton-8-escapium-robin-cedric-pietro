@@ -776,7 +776,7 @@ section#carousel-container {
   padding: 15vh 10%;
 }
 section#carousel-container::before {
-  background: hsla(0, 0%, 0%, 0.4);
+  display: none;
 }
 section#carousel-container h2 {
   font-size: 3rem;
@@ -803,14 +803,14 @@ section#carousel-container section {
   gap: 7vw;
 }
 section#carousel-container section article {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5vh;
 }
 section#carousel-container section article:first-child {
-  display: none;
+  display: flex;
 }
 section#carousel-container p {
   text-align: center;
@@ -834,6 +834,7 @@ section#carousel-container div.navigate-btn {
     position: relative;
   }
   section#carousel-container::before, section#carousel-container::after {
+    display: block;
     content: "";
     width: 15%;
     height: 100%;
