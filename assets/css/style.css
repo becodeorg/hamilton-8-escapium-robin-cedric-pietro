@@ -392,7 +392,7 @@ header div#burger.on-click span:nth-child(3) {
     padding-right: 3em;
   }
   header a, header input {
-    font-size: 1vw;
+    font-size: 0.85vw;
   }
   header nav {
     position: unset;
@@ -439,7 +439,7 @@ header div#burger.on-click span:nth-child(3) {
   header section:nth-child(2) a:first-child {
     width: auto;
     height: auto;
-    padding: 1vw 2vw;
+    padding: 1em 2em;
     border-radius: 20px;
   }
   header section:nth-child(2) a:first-child::after {
