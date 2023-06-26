@@ -853,7 +853,7 @@ section#carousel-container div.navigate-btn {
   section#carousel-container section {
     min-width: 200%;
     position: relative;
-    left: 450px;
+    left: 32vw;
     transition: all 0.5s ease;
   }
   section#carousel-container section article {

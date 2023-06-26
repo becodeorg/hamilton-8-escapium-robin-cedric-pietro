@@ -4,7 +4,7 @@
 	<article>
 		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
 		<figure>
-			<img src="assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
+			<img src="/assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
 		</figure>
 		<cite>aaron</cite>
 	</article>
@@ -12,7 +12,7 @@
 	<article>
 		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
 		<figure>
-			<img src="assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
+			<img src="/assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
 		</figure>
 		<cite>tiffany</cite>
 	</article>
@@ -20,7 +20,7 @@
 	<article>
 		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
 		<figure>
-			<img src="assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
+			<img src="/assets/resources/images/avatars/comment-avatar-1.png" alt="aaron picture">
 		</figure>
 		<cite>aaron</cite>
 	</article>
@@ -28,7 +28,7 @@
 	<article>
 		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
 		<figure>
-			<img src="assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
+			<img src="/assets/resources/images/avatars/comment-avatar-2.png" alt="tiffany picture">
 		</figure>
 		<cite>tiffany</cite>
 	</article>
@@ -40,13 +40,14 @@
 </div>
 <script>
 	let carouselContainer = document.getElementById("carousel-container")
-	let title = carouselContainer.getAttribute("data-title")
-	let subTitle = carouselContainer.getAttribute("data-subtitle")
 	let carousel = document.getElementById("carrousel")
 	
-	let h2 = document.querySelector(".title")
+	let title = carouselContainer.getAttribute("data-title")
+	let subTitle = carouselContainer.getAttribute("data-subtitle")
+	
+	let carouselTitle = document.querySelector(".title")
 	let a = document.querySelector(".below-link")
-	h2.textContent = title
+	carouselTitle.textContent = title
 	if(subTitle != undefined) {
 		a.textContent = subTitle
 	} else {
@@ -56,17 +57,19 @@
 	$(document).ready(function() {
 		$(".prev").on('click', function() {
 			let prevValue = parseInt(window.getComputedStyle(carousel).left)
+			let vw = Math.round(100 * prevValue / window.innerWidth)
 			
-			if (prevValue <= -15) {
-				carousel.style.left = prevValue + 465 + "px"
+			if (prevValue <= 11) {
+				carousel.style.left = vw + 32 + "vw"
 			}
 		})
 		
 		$(".next").on('click', function() {
 			let prevValue = parseInt(window.getComputedStyle(carousel).left)
+			let vw = Math.round(100 * prevValue / window.innerWidth)
 			
 			if (prevValue >= -15) {
-				carousel.style.left = prevValue - 465 + "px"
+				carousel.style.left = vw - 32 + "vw"
 			}
 		})
 	})
