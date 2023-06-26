@@ -2081,11 +2081,11 @@ main.blogs_pages .article .txt .readmore {
   border: 1px solid;
   margin-bottom: 1rem;
 }
-main.blogs_pages .article .txt .readmore:hover {
-  background-color: hsla(0, 100%, 100%, 0.2);
-}
 main.blogs_pages .article .txt .readmore a {
   text-decoration: none;
+}
+main.blogs_pages .article .txt .readmore:hover {
+  background-color: hsla(0, 100%, 100%, 0.2);
 }
 main.blogs_pages .article .img {
   display: flex;
