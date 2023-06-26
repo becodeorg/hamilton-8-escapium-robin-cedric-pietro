@@ -1,5 +1,5 @@
 <h2 class="title"></h2>
-<a class="below-link" href="#"></a>
+<a id="subtitle" class="below-link" href="#"></a>
 <section id="carrousel">
 	<article>
 		<p>"This place is a blast, especially for groups! I loved seeing how group members of different personalities approached the puzzles."</p>
@@ -45,15 +45,18 @@
 	let title = carouselContainer.getAttribute("data-title")
 	let subTitle = carouselContainer.getAttribute("data-subtitle")
 	
+	// text
 	let carouselTitle = document.querySelector(".title")
-	let a = document.querySelector(".below-link")
+	let a = document.getElementById("subtitle")
 	carouselTitle.textContent = title
-	if(subTitle != undefined) {
+	
+	if (subTitle != undefined) {
 		a.textContent = subTitle
 	} else {
 		a.style.display = "none"
 	}
 	
+	// carousel
 	$(document).ready(function() {
 		$(".prev").on('click', function() {
 			let prevValue = parseInt(window.getComputedStyle(carousel).left)

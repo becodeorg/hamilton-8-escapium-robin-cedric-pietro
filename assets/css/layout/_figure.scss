@@ -126,6 +126,10 @@ section#figure {
 		
 			div:nth-child(1) {
 				align-items: flex-start;
+				
+				a {
+					justify-content: flex-start;
+				}
 			}
 		
 			div:nth-child(2) {

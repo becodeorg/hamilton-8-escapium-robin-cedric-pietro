@@ -180,7 +180,8 @@ header {
 				}
 				
 				&:hover {
-					border-color: $white-background;
+					border-color: hsla(0, 100%, 100%, 0.2);
+					background: hsla(0, 100%, 100%, 0.2);
 				}
 				
 				&:active {
@@ -203,6 +204,10 @@ header {
 			
 			i {
 				font-size: 1.2em;
+			}
+			
+			&:hover i {
+				color: $red;
 			}
 		}
 	}
