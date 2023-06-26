@@ -52,6 +52,8 @@
 	
 	if (subTitle != undefined) {
 		a.textContent = subTitle
+		a.append(document.createElement("span"))
+		a.append(document.createElement("span"))
 	} else {
 		a.style.display = "none"
 	}
