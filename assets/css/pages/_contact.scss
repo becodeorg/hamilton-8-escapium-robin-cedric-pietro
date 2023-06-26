@@ -5,6 +5,8 @@
     }
 }
 .container{
+    display: flex;
+    flex-direction: column;
     .getInTouch{
         display: flex;
         flex-direction: column;
@@ -41,7 +43,7 @@
         }
     }
 }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 768px) {
     .contact{
         .pageiid{
             display: flex;

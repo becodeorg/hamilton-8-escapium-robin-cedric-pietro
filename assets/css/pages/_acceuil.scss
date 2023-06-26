@@ -509,3 +509,17 @@ main.home {
 		}
 	}
 }
+@media screen and (min-width: 1200px) {
+	
+	section#contact {
+		flex-direction: row;
+		& > section:nth-child(1) {
+			width: 100%;
+			height: 1000px;
+			
+			iframe {
+				width: 100%;
+			}
+		}
+	}
+}

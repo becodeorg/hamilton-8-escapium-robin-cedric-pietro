@@ -560,18 +560,6 @@ section#contact section form button:hover {
   background: #f60b0e;
 }
 
-@media screen and (min-width: 1200px) {
-  section#contact {
-    flex-direction: row;
-  }
-  section#contact > section:nth-child(1) {
-    width: 100%;
-    height: 1000px;
-  }
-  section#contact > section:nth-child(1) iframe {
-    width: 100%;
-  }
-}
 section#figure {
   min-height: 50vw;
   display: flex;
@@ -1401,6 +1389,18 @@ main.home > section:nth-child(8) a:hover {
     grid-template-rows: repeat(2, 1fr);
   }
 }
+@media screen and (min-width: 1200px) {
+  section#contact {
+    flex-direction: row;
+  }
+  section#contact > section:nth-child(1) {
+    width: 100%;
+    height: 1000px;
+  }
+  section#contact > section:nth-child(1) iframe {
+    width: 100%;
+  }
+}
 main.about {
   width: 100%;
   min-height: 100vh;
@@ -1538,11 +1538,8 @@ main.about #carousel-container h2 {
 }
 main.about #carousel-container a {
   color: red;
-<<<<<<< HEAD
-=======
   font-size: 10px;
   margin-bottom: 10%;
->>>>>>> 2d75a796082ccb858e833e018c85f0024bf723f6
 }
 main.about #carousel-container p {
   color: #717171;
@@ -1552,18 +1549,15 @@ main.about #carousel-container::before, main.about #carousel-container::after {
 }
 main.about .faq__section {
   width: 100%;
-<<<<<<< HEAD
-  margin: 0;
-=======
   min-height: 50%;
   margin: 0 auto;
->>>>>>> 2d75a796082ccb858e833e018c85f0024bf723f6
   padding: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2vh;
+  padding: 10vh 0 5vh 0;
 }
 main.about .faq__section__title {
   text-align: center;
@@ -1587,10 +1581,7 @@ main.about .faq__section__item {
   gap: 2rem;
 }
 main.about .faq__section__item__question {
-<<<<<<< HEAD
-  padding-bottom: 3%;
-=======
->>>>>>> 2d75a796082ccb858e833e018c85f0024bf723f6
+  padding-bottom: 3vh;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2970,6 +2961,80 @@ main.blogsingle .escape ul.button .tags_button:hover {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     margin-left: 1rem;
+  }
+}
+.contact #contact {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.container .getInTouch {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+.container .getInTouch__title {
+  color: white;
+  padding: 10px;
+}
+.container .getInTouch__para {
+  padding: 20px;
+  color: #717171;
+}
+.container .getInTouch__ul {
+  display: flex;
+  flex-direction: column;
+  color: #717171;
+  gap: 2em;
+  width: 100%;
+  padding: 10px;
+}
+.container .getInTouch__ul__mail__para {
+  color: white;
+}
+.container .getInTouch__ul i {
+  font-size: 30px;
+}
+.container .getInTouch__ul li {
+  display: flex;
+  color: #717171;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4em;
+}
+
+@media screen and (min-width: 768px) {
+  .contact .pageiid {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact #contact .container {
+    display: flex;
+    flex-direction: row;
+    padding: 15vh;
+  }
+  .contact #contact .container::before {
+    display: none;
+  }
+  .contact #contact .getInTouch {
+    width: unset;
+    height: unset;
+  }
+  .contact #contact .formu {
+    flex-direction: column;
+    width: 80vw;
+    padding-top: 2vh;
+  }
+  .contact #contact .formu button {
+    width: 100%;
+  }
+  .contact #contact .formu button:hover {
+    background-color: red;
   }
 }
 
