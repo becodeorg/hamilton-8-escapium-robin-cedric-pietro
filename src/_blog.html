@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="/assets/css/style.css" rel="stylesheet">
         <script src="https://kit.fontawesome.com/7b1b14c1ce.js" crossorigin="anonymous" defer></script>
-        <script defer>
+
+            <script src="/assets/js/blogsingle.js" defer></script>
+            <script defer>
 			$(function() {
                 $("#pageid").load("/src/_firstsection.html")
 				$("#header").load("/src/_header.html")
@@ -18,18 +20,20 @@
 
 <body>
     <header data-value="6" id="header"></header>
-    
     <main class="blogsingle">
-        <section data-title="Blog" data-sub1="Escapium" data-sub2="blog" id="pageid" class="pageiid"></section>
-    <article>
-        <img src="/assets/resources/images/gallery/room-9.jpg">
+        <section data-title="Blog" data-sub1="September 4, 2018" data-sub2="ANDY BERNARD" data-sub3="4 COMMENTS" id="pageid" class="pageiid"></section>
+        
+        <section class="container">
+        <section class="article">
+        <article  class="escape">
+        <img class="img" src="/assets/resources/images/gallery/room-9.jpg">
         <p>
             Aenean turpis dolor, ornare sed impered id, pulvinar eu
             massa. Nulla accumsan lorem convallis tellus f&ucibus,
             eu laoreet. Sed vitae purus. Aenean euismod turpis
             sem, quis vehicula diam lacinia a Nam ultrices.
         </p>
-        <h1>Can You Escape?</h1>
+        <h2>Can You Escape?</h2>
         <p>
             Sed quis mi vel odio aliquam interdum et ut urna.
             Donec malesuada tincidunt augue, porttitor tempus
@@ -50,7 +54,7 @@
             tristique lacinia lorem eu varius.
         </p>
 
-        <img src="/assets/resources/images/gallery/gallery-1.jpg">
+        <img class="img" src="/assets/resources/images/gallery/gallery-1.jpg">
         <p>
             In mi felis, semper vitae mi id, molestie commodo
             tellus. Nullam neque dolor, faucibus ac sollicitudin
@@ -74,40 +78,47 @@
            tristique laciania lorem eu varius.
         </p>
 
-        <button>Clock</button>
-        <button>Game</button>
-        <button>Mechanisms</button>
-        <button>Promo</button>
-        <button>Puzzle</button>
+        <ul class="button">
+            <li><button class="tags_button">Clock</button></li>
+            <li><button class="tags_button">Game</button></li>
+            <li><button class="tags_button">Mechanisms</button></li>
+            <li><button class="tags_button">Promo</button></li>
+            <li><button class="tags_button">Puzzle</button></li>
+        </ul>
+
     </article>
 
         <div class="etiquette">
         
-                <img src="" alt="">
-                <h2>Andy Bernard</h2>
-                <button><i></i></button>
+                <img src="/assets/resources/images/avatars/c3c95c15683498ce1cf96c1a61b662c9.png" alt="">
+                <h2 class="name">Andy Bernard</h2>
+                <button><i class="fa-regular fa-envelope" style="color: white;"></i></button>
             
         </div>
 
-        <a href="#"><h3>PERFECT FOR TEAM BUILDING</h3></a>
+        <h3 class="other">PERFECT FOR TEAM BUILDING</h3>
 
-        <section class="comments">
+    <section class="comments">
+        <h3 class="comments_h">Comments(4)</h3>
            <article class="post">
             <div class="entete">
-                <i>avatar</i>
-                <h3>Betty Drapper</h3>
+                <img src="/assets/resources/images/avatars/betty-draper.png">
+                <h3 class="title">Betty Drapper</h3>
             </div> 
-            <p>Vivamus rhoncus nibh nisi, sit amet faucibus ante viverra et. Ut
-                dolor velit, iaculis id dolor condimentum, convallis porta felis.
+            <p>
+            Vivamus rhoncus nibh nisi, sit amet faucibus ante viverra et. Ut
+            dolor velit, iaculis id dolor condimentum, convallis porta felis.
             </p>
             <button class="reply">REPLY</button>
            </article> 
 
            <article class="post">
             <div class="entete">
-                <i>avatar</i>
-                <h3>admin</h3>
-            </div> sed id sapien eu tellus vestibulum yempor ut sit amet risus. Sed
+                <img src="/assets/resources/images/attachment_121158757.png" style="width:50px; height:50px">
+                <h3 class="title">admin</h3>
+            </div>
+            <P>
+            sed id sapien eu tellus vestibulum yempor ut sit amet risus. Sed
             dapibus blandit maximus. Nam convallis dapibus risus ut
             efficitur. Curabitur interdum quam vitae ullamcorper
             fermentum. Integer lacinia varius mi, at feugiat felis vulputate
@@ -120,29 +131,29 @@
 
            <article class="post">
             <div class="entete">
-                <i>avatar</i>
-                <h3>Andy Bernard</h3>
+                <img src="/assets/resources/images/avatars/c3c95c15683498ce1cf96c1a61b662c9.png">
+                <h3 class="title">Andy Bernard</h3>
             </div> 
             <p>
-                Sed dapibus blandit maximus. Nam convallis dapibus risus ut
-                efficitur. Curabitur interdum quam vitae ullamcorper 
-                fermentum. Integer lacinia varius mi, at feugiat felis vulputate
-                at. Praesent sed laoreet diam, eget pellentesque nibh.
+            Sed dapibus blandit maximus. Nam convallis dapibus risus ut
+            efficitur. Curabitur interdum quam vitae ullamcorper 
+            fermentum. Integer lacinia varius mi, at feugiat felis vulputate
+            at. Praesent sed laoreet diam, eget pellentesque nibh.
             </p>
             <button class="reply">REPLY</button>
            </article> 
 
            <article class="post">
             <div class="entete">
-                <i>avatar</i>
-                <h3>Kelly Kapoor</h3>
+                <img src="/assets/resources/images/avatars/comment-avatar-2.png">
+                <h3 class="kelly">Kelly Kapoor</h3>
             </div> 
             <p>
-                Pellentesque elementum sit amet risus sed finibus. Curabitur ut
-                scellerisque ipsum. Aenean sodales libero at libero ornare, eu
-                lacinia turpis elementum. Maecenas finibus, erat id accumsan 
-                elementum, est nisl mattis lectus, eu convallis ipsum velit eu
-                arcu.
+            Pellentesque elementum sit amet risus sed finibus. Curabitur ut
+            scellerisque ipsum. Aenean sodales libero at libero ornare, eu
+            lacinia turpis elementum. Maecenas finibus, erat id accumsan 
+            elementum, est nisl mattis lectus, eu convallis ipsum velit eu
+            arcu.
             </p>
             <button class="reply">REPLY</button>
            </article> 
@@ -150,10 +161,77 @@
 
         <section class="leaveacomment">
             <h2>Leave a Comment</h2>
-            <button type="submit" [disabled]="!form.form.valid">
-                Save
-            </button>
+            <form>
+                <div class="Name">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="Email">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="Comment">
+                    <label for="comment">Comment:</label>
+                    <input type="text" id="comment" name="comment" required></textarea>
+                </div>
+                <div>
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <button type="submit" class="submit">Post Your Comment</button>
+            </form>
+        </section>
+        </section>
 
+        <section class="section">
+            <h3>Categories</h3>
+            <ul class="cat">
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>Corporate events</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>Leadership Development</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>Motivation</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>Observe interactions</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>promotions</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>synergy</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>Team Building</li>
+            </ul>
+            <h3>Recent Posts</h3>
+            <ul class="recent_posts">
+                <li class="k"><date>04/09/2018</date><p>KIDNAPPED GAME NOW OPEN</p></li>
+                <li class="p"><date>04/09/2018</date><p>PERFECT FOR TEAM BUILDING</p></li>
+                <li class="w"><date>04/04/2018</date><p>WHAT IS AN ESCAPE ROOM?</p></li>
+                <li class="b"><date>04/04 /2018</date><p>PERFECT FOR TEAM BUILDING</p></li>
+            </ul> 
+            <h3>Tags</h3>
+            <ul class="tags_ul">
+                <li><button class="tags_button">Clock</button></li>
+                <li><button class="tags_button">escape</button></li>
+                <li><button class="tags_button">Game</button></li>
+                <li><button class="tags_button">mechanisms</button></li>
+                <li><button class="tags_button">mystery</button></li>
+                <li><button class="tags_button">promo</button></li>
+                <li><button class="tags_button">puzzle</button></li>
+                <li><button class="tags_button">room</button></li> 
+            </ul>
+            <h3>Instagram</h3>
+            <div class="Instagram_img">
+                <img class="img1" src="/assets/resources/images/gallery/gallery-7.jpg" alt="">
+                <img class="img2" src="/assets/resources/images/gallery/gallery-6.jpg" alt="">
+                <img class="img3" src="/assets/resources/images/gallery/gallery-2.jpg" alt="">
+                <img class="img4"src="/assets/resources/images/gallery/gallery-1.jpg" alt="">
+                <img class="img5" src="/assets/resources/images/gallery/gallery-8.jpg" alt="">
+                <img class="img6" src="/assets/resources/images/gallery/gallery-4.jpg" alt="">
+            </div>
+            <button class="Instagram_button"><i class="fa-brands fa-instagram" style="color:  #717171;"></i><p>Follow on instagram</p></button>
+            <h3>Archives</h3>
+            <ul class="cat">
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>september 2018</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>april 2018</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>september 2017</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>novembre 2016</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>octobre 2016</li>
+                <li><i class="fa-solid fa-circle" style="color: #be2419;"></i>september 2016</li>
+            </ul>
+         </section>   
         </section>
 
 
